@@ -8,6 +8,9 @@ import HeroSection from "./components/HeroSection";
 import IndexSection from "./components/IndexSection";
 import IntroSection from "./components/IntroSection";
 import ProjectsSection from "./components/ProjectsSection";
+import { Link } from "react-router-dom";
+import "./App.css";
+import { useEffect, useRef, useState } from "react";
 
 function App() {
   const elementsRef = useRef([]);
