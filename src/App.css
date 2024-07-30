@@ -118,6 +118,10 @@ main{
     /* margin-left: 150px; */
 }
 
+#web, #social, #print, #brand, #extra{
+    scroll-margin-top: 100px;
+}
+
 .fixed-side-bar{
     position: sticky;
     top: 0;
@@ -571,6 +575,7 @@ tr:nth-child(odd) {
     gap: 50px;
     padding: 0px 50px;
     padding-bottom: 25px;
+    border-bottom: 1px solid #00000014;
 }
 
 .project-image{
@@ -631,6 +636,7 @@ tr:nth-child(odd) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px;
     padding: 25px 50px;
+    border-bottom: 1px solid #00000014;
 }
 
 .print-projects-showcase{
@@ -638,6 +644,7 @@ tr:nth-child(odd) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px;
     padding: 25px 50px;
+    border-bottom: 1px solid #00000014;
 }
 
 .brand-projects-showcase{
@@ -645,6 +652,7 @@ tr:nth-child(odd) {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     padding: 25px 50px;
+    border-bottom: 1px solid #00000014;
 }
 
 .packaging-projects-showcase{
