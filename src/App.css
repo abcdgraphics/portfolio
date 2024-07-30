@@ -168,15 +168,8 @@ body {
   letter-spacing: -1px;
 }
 
-/* ::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-} */
-
 /* Custom Styles */
-
 main {
-  /* height: 100vh; */
   display: flex;
   position: relative;
   font-family: 'Proxima-Nova';
@@ -197,20 +190,18 @@ main {
 
 .scrollable-main {
   width: 100%;
-  /* background-color: #ebe7ff; */
-  /* margin-left: 150px; */
 }
 
 #web, #social, #print, #brand, #extra{
     scroll-margin-top: 100px;
 }
 
-.fixed-side-bar {
-  position: sticky;
-  top: 0;
-  left: 0;
-  background-color: white;
-  height: 100vh;
+.fixed-side-bar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: white;
+    height: 100vh;
 }
 
 .logo {
@@ -484,36 +475,34 @@ main {
   gap: 20px;
 }
 
-/* General style for social links to change color to white */
 .social-links .link img {
-  filter: invert(100%); /* Change the color to white */
+  filter: invert(100%);
+  cursor: pointer;
 }
 
-/* Individual styles for each social media icon */
 .social-links .link img.facebook-icon {
-  width: 16px; /* Adjust the size of the Facebook icon */
-  height: 16px; /* Adjust the size of the Facebook icon */
+  width: 16px; 
+  height: 16px; 
 }
 
 .social-links .link img.behance-icon {
-  width: 20px; /* Adjust the size of the Behance icon */
-  height: 20px; /* Adjust the size of the Behance icon */
+  width: 20px; 
+  height: 20px; 
 }
 
 .social-links .link img.linkedin-icon {
-  width: 20px; /* Adjust the size of the LinkedIn icon */
-  height: 20px; /* Adjust the size of the LinkedIn icon */
+  width: 20px; 
+  height: 20px; 
 }
 
 .social-links .link img.instagram-icon {
-  width: 20px; /* Adjust the size of the Instagram icon */
-  height: 20px; /* Adjust the size of the Instagram icon */
+  width: 20px; 
+  height: 20px; 
 }
 
-/* Optional: Add hover effect for all icons */
 .social-links .link img:hover {
-  transform: scale(1.1); /* Slightly increase the size on hover */
-  transition: transform 0.2s ease; /* Smooth transition effect */
+  transform: scale(1.1); 
+  transition: transform 0.2s ease; 
 }
 
 .divider {
@@ -723,12 +712,6 @@ tr:nth-child(odd) {
     padding: 0px 50px;
     padding-bottom: 25px;
     border-bottom: 1px solid #00000014;
-.projects-showcase {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  padding: 0px 50px;
-  padding-bottom: 25px;
 }
 
 .project-image {
@@ -785,14 +768,6 @@ tr:nth-child(odd) {
   transition: background-color 0.3s;
 }
 
-.projets-main-heading.sticky {
-  background: linear-gradient(
-    135deg,
-    #fffaf6 0%,
-    #f9fbff 50%
-  ); /* or any color you prefer */
-}
-
 .social-projects-showcase{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -815,6 +790,13 @@ tr:nth-child(odd) {
     gap: 30px;
     padding: 25px 50px;
     border-bottom: 1px solid #00000014;
+}
+
+.brand-projects-showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 25px 50px;
 }
 
 .packaging-projects-showcase {

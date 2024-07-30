@@ -14,16 +14,16 @@ export default function IntroSection({ elementsRef }) {
         <div className="divider"></div>
         <div className="social-links">
           <div className="link">
-            <img src="/social-icons/facebook.svg" />
+            <img className="facebook-icon" src="/social-icons/facebook.svg" />
           </div>
           <div className="link">
-            <img src="/social-icons/behance.svg" />
+            <img className="behance-icon" src="/social-icons/behance.svg" />
           </div>
           <div className="link">
-            <img src="/social-icons/linkedin.svg" />
+            <img className="linkedin-icon" src="/social-icons/linkedin.svg" />
           </div>
           <div className="link">
-            <img src="/social-icons/instagram.svg" />
+            <img className="instagram-icon" src="/social-icons/instagram.svg" />
           </div>
         </div>
         <p className="phone">
