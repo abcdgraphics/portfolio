@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "./App.css";
+import "./output.css";
 import { useEffect, useRef, useState } from "react";
 import Sidebar from "./components/Sidebar";
 import ThankyouSection from "./components/ThankyouSection";
@@ -7,6 +7,7 @@ import HeroSection from "./components/HeroSection";
 import IndexSection from "./components/IndexSection";
 import IntroSection from "./components/IntroSection";
 import ProjectsSection from "./components/ProjectsSection";
+import CreativeSection from "./components/CreativeSection";
 
 function App() {
   const elementsRef = useRef([]);
@@ -41,6 +42,7 @@ function App() {
           <ProjectsSection elementsRef={elementsRef} />
         </div>
       </main>
+      <CreativeSection />
       <ThankyouSection />
     </>
   );
