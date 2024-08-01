@@ -2456,6 +2456,8 @@ li {
   width: 100px;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+  height: 50px;
 }
 
 .btn-ani-bg{
@@ -2467,11 +2469,22 @@ li {
   right: 100%;
   top: 0px;
   height: 100%;
-  transition: all 1s linear;
+  transition: all 0.5s cubic-bezier(0.26, 0.39, 0.55, 0.86);
 }
 
 .cookie-consent button:hover .btn-ani-bg{
   right: 0;
+}
+
+.btn-text{
+  position: relative;
+  z-index: 10;
+  transition: color 0.8s cubic-bezier(0.26, 0.39, 0.55, 0.86);
+  font-size: 18px;
+}
+
+.cookie-consent button:hover .btn-text{
+  color: white;
 }
 
 .group\/canvas-card:hover .group-hover\/canvas-card\:-translate-y-2{
