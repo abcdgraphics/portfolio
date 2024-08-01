@@ -8,6 +8,7 @@ import IndexSection from "./components/IndexSection";
 import IntroSection from "./components/IntroSection";
 import ProjectsSection from "./components/ProjectsSection";
 import CreativeSection from "./components/CreativeSection";
+import CookieConsent from "./components/CookieConsent";
 
 function App() {
   const elementsRef = useRef([]);
@@ -44,6 +45,7 @@ function App() {
       </main>
       <CreativeSection />
       <ThankyouSection />
+      <CookieConsent />
     </>
   );
 }
