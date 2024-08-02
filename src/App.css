@@ -93,6 +93,10 @@ video {
   vertical-align: baseline;
 }
 
+a{
+  cursor: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -118,6 +122,8 @@ section {
 
 body {
   line-height: 1;
+  cursor: none !important;
+  position: relative;
 }
 
 ol,
@@ -354,10 +360,7 @@ main {
   height: 150px;
   border-radius: 50%;
   background-color: #ed7d31;
-  /* position: absolute; */
-  /* bottom: 40px; */
-  /* right: 40px; */
-  cursor: pointer;
+  cursor: none;
 }
 
 .navigation a {
@@ -394,7 +397,7 @@ main {
   right: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  cursor: pointer;
+  cursor: none;
 }
 
 .project-navigation a {
@@ -491,7 +494,7 @@ main {
 
 .social-links .link img {
   filter: invert(100%);
-  cursor: pointer;
+  cursor: none;
 }
 
 .social-links .link img.facebook-icon {
@@ -791,6 +794,7 @@ tr:nth-child(odd) {
   padding: 10px 25px;
   border-radius: 60px;
   font-weight: 500;
+  cursor: none;
 }
 
 .resume-text{
@@ -1033,7 +1037,7 @@ li {
   width: 100px;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
+  cursor: none;
   height: 50px;
 }
 
@@ -1062,4 +1066,40 @@ li {
 
 .cookie-consent button:hover .btn-text{
   color: white;
+}
+
+#magic-cursor {
+  position: absolute;
+  /* width: 30px;
+  height: 30px; */
+  pointer-events: none;
+  z-index: 1000000;
+}
+
+#ball {
+  position: fixed;
+  display: block;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ed7d31;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 1;
+}
+
+#dot {
+  position: fixed;
+  display: block;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #ed7d31;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 1;
 }

@@ -9,6 +9,7 @@ import IntroSection from "./components/IntroSection";
 import ProjectsSection from "./components/ProjectsSection";
 import CreativeSection from "./components/CreativeSection";
 import CookieConsent from "./components/CookieConsent";
+import Cursor from "./components/Cursor";
 
 function App() {
   const elementsRef = useRef([]);
@@ -46,6 +47,7 @@ function App() {
       <CreativeSection />
       <ThankyouSection />
       <CookieConsent />
+      <Cursor />
     </>
   );
 }
