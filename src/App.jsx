@@ -10,6 +10,9 @@ import ProjectsSection from "./components/ProjectsSection";
 import CreativeSection from "./components/CreativeSection";
 import CookieConsent from "./components/CookieConsent";
 import Cursor from "./components/Cursor";
+import Connect from "./components/Connect";
+import Contact from "./components/Contact";
+import Social from "./components/Social";
 
 function App() {
   const elementsRef = useRef([]);
@@ -42,6 +45,9 @@ function App() {
           <IndexSection elementsRef={elementsRef} />
           <IntroSection elementsRef={elementsRef} />
           <ProjectsSection elementsRef={elementsRef} />
+          <Connect elementsRef={elementsRef} />
+          <Contact elementsRef={elementsRef} />
+          <Social elementsRef={elementsRef} />
         </div>
       </main>
       <CreativeSection />

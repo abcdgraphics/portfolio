@@ -45,7 +45,6 @@ tt,
 var,
 b,
 u,
-i,
 center,
 dl,
 dt,
@@ -95,6 +94,11 @@ video {
 
 a{
   cursor: none;
+}
+
+button{
+  font-size: 18px;
+  cursor: none !important;
 }
 
 html {
@@ -227,7 +231,6 @@ main {
 .hero-section {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100vh;
   padding: 40px;
   position: relative;
@@ -241,7 +244,7 @@ main {
 }
 
 .hero-profile-row > div:nth-child(1)  {
-  width: 25%;
+  width: 50%;
   height: fit-content;
   color: #ed7d31;
   font-size: 24px;
@@ -253,7 +256,7 @@ main {
 }
 
 .hero-profile-row  > div:nth-child(2) {
-  width: 75%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   text-align: right;
@@ -263,6 +266,8 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: end;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .flip-word-heading{
@@ -276,6 +281,8 @@ main {
 .flip-word-sub-heading{
   color: #ed7d31;
   font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .profile-name {
@@ -290,21 +297,26 @@ main {
 }
 
 .profile-name-design {
+  width: 100%;
   display: flex;
   align-items: center;
 }
 
-.profile-name-design > div:nth-child(1) {
+.profile-name-design > .round div {
   width: 24px;
   height: 24px;
   background-color: #ed7d31;
   border-radius: 50%;
 }
 
-.profile-name-design > div:nth-child(2) {
-  width: 130px;
+.profile-name-design > .line {
+  width: 100%;
   height: 2px;
   background-color: #ed7d31;
+}
+
+.lets-connect-col-2 .profile-name-design > .line{
+  width: 150px;
 }
 
 .profile-name-design > div:nth-child(3) {
@@ -316,9 +328,11 @@ main {
 
 .portfolio-title {
   color: #ed7d31;
-  font-size: 170px;
-  line-height: 120px;
+  font-size: 70px;
+  line-height: 70px;
   font-weight: 800;
+  text-align: left;
+  margin-left: 20px;
 }
 
 .portfolio-title-design {
@@ -346,13 +360,14 @@ main {
 .portfolio-timeline {
   color: #ed7d31;
   font-size: 14px;
-  width: 900px;
+  width: 100%;
   position: absolute;
   top: 100%;
   display: flex;
   justify-content: space-between;
   font-weight: 800;
   letter-spacing: 0.5px;
+  padding: 0px 30px;
 }
 
 .navigation {
@@ -440,7 +455,7 @@ main {
 .index-container p {
   text-align: center;
   margin-top: 10px;
-  color: #ed7d31;
+  /* color: #ed7d31; */
 }
 
 .intro-container {
@@ -575,6 +590,7 @@ main {
 .summary {
   width: 25%;
   padding: 20px 50px;
+  color: #ed7d31;
 }
 
 .summary-heading {
@@ -591,12 +607,13 @@ main {
 
 .summary-desc {
   font-size: 16px;
+  color: #404040;
+  font-size: 18px;
   font-weight: 400;
 }
 
 .summary-desc span {
   color: #ed7d31;
-  text-decoration: underline;
   font-weight: bold;
 }
 
@@ -795,6 +812,7 @@ tr:nth-child(odd) {
   border-radius: 60px;
   font-weight: 500;
   cursor: none;
+  width: 250px;
 }
 
 .resume-text{
@@ -859,9 +877,10 @@ tr:nth-child(odd) {
 
 .side-bar-dynamic-name {
   rotate: -90deg;
-  font-size: 80px;
+  font-size: 50px;
   color: #ed7d31;
   font-weight: 800;
+  text-wrap: nowrap;
 }
 
 .thankyou-section {
@@ -916,12 +935,12 @@ li {
   margin: 50px 0;
 }
 
-.index-container-content{
-  color: #D0D8EA;
-  font-size: 40px;
+.index-container-heading{
+  color: #ed7d31;
+  font-size: 35px;
   line-height: 40px;
   text-align: center;
-  margin-bottom: 50px;
+  padding: 0% 10%;
 }
 
 .index{
@@ -1102,4 +1121,141 @@ li {
   border-radius: 50%;
   pointer-events: none;
   opacity: 1;
+}
+
+.flip-word-content{
+  font-size: 18px;
+  padding-right: 30%;
+  margin-bottom: 10px;
+  color: #404040;
+}
+
+.flip-word-col{
+  width: 50%;
+}
+
+.index-container-content{
+  font-size: 20px;
+  padding: 0% 30%;
+  color: #404040;
+  margin-bottom: 50px;
+}
+
+.index-container-buttons{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.index-container-buttons > button:nth-child(1){
+  background-color: #E4E8F2;
+  padding: 12px 30px;
+  border-radius: 60px;
+  width: 200px;
+}
+
+.index-container-buttons a button{
+  background-color: #ed7d31;
+  padding: 12px 30px;
+  border-radius: 60px;
+  color: white;
+  width: 200px;
+}
+
+.lets-connect-container{
+  height: 100vh;
+  padding: 50px;
+  display: flex;
+  border-top: 1px solid #00000014;
+  background-image: url(/thank-you-banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.lets-connect-container > div{
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  height: fit-content;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.lets-connect-col-1{
+  width: 40%;
+  color: #ed7d31;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: auto;
+}
+
+.lets-connect-col-1 h2{
+  font-size: 100px;
+  line-height: 90px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.lets-connect-col-1 p{
+  font-size: 18px;
+  color: #404040;
+  margin-bottom: 10px;
+}
+
+.lets-connect-col-1 .first{
+  color: #ed7d31;
+}
+
+.lets-connect-col-1 .last{
+  color: #ed7d31;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.lets-connect-col-2{
+   width: 15%;
+  padding-top: 10px;
+}
+
+.lets-connect-col-3{
+   width: 30%;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  padding-right: 50px;
+}
+
+form input{
+  padding: 15px 25px;
+  background-color: #EFF1F7;
+  color: black;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+form input::placeholder{
+  color: black;
+}
+
+form textarea{
+  padding: 15px 25px;
+  background-color: #EFF1F7;
+  font-size: 16px;
+}
+
+form textarea::placeholder{
+  color: black;
+}
+
+form button{
+  padding: 10px 25px;
+  background-color: #ed7d31;
+  border-radius: 60px;
+  margin-top: 20px;
+  width: 60%;
+  color: white;
 }

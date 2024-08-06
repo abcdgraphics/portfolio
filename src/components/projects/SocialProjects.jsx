@@ -3,7 +3,7 @@ export default function SocialProjects({ elementsRef }) {
     <div
       id="social"
       data-name="SOCIAL"
-      ref={(el) => (elementsRef.current[2] = el)}
+      ref={(el) => (elementsRef.current[4] = el)}
       className="social-projects-showcase">
       <img src="/projects/creative-1.jpg" />
       <img src="/projects/creative-2.jpg" />

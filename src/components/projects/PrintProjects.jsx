@@ -3,7 +3,7 @@ export default function PrintProjects({ elementsRef }) {
     <div
       id="print"
       data-name="PRINT"
-      ref={(el) => (elementsRef.current[3] = el)}
+      ref={(el) => (elementsRef.current[5] = el)}
       className="print-projects-showcase">
       <img src="/projects/print-1.png" />
       <img src="/projects/print-2.png" />

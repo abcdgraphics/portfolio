@@ -5,7 +5,7 @@ export default function IntroSection({ elementsRef }) {
     <div
       id="intro"
       data-name="INTRO"
-      ref={(el) => (elementsRef.current[0] = el)}
+      ref={(el) => (elementsRef.current[2] = el)}
       className="intro-container">
       <div className="intro-profile">
         <img className="profile-pic" src="/profile.png" />
@@ -39,14 +39,18 @@ export default function IntroSection({ elementsRef }) {
       <div className="intro-details">
         <div className="career-section">
           <div className="summary">
-            <h2 className="summary-heading">CAREER SUMMARY</h2>
+            <h2 className="summary-heading">WHO AM I?</h2>
             <p className="summary-desc">
-              A seasoned web and graphic designer with over{" "}
-              <span>10+ years of experience</span> in creating compelling
-              digital and print media. Proven ability to lead design teams and
-              manage projects from conception to completion. Skilled in multiple
-              design tools and technologies with a keen ability to adapt to new
-              trends and technologies.
+              The world knows me as <span>Akhil Bandaru</span>. I’m a man of
+              many talents (bragging rights reserved) with over a decade of
+              experience in crafting captivating digital and print media.
+            </p>
+            <p className="summary-desc">
+              I excel in leading design teams and orchestrating projects from
+              visionary inception to completion. Skilled in a plethora of design
+              tools and technologies, I have an uncanny knack for embracing and
+              setting new trends. I’m like Tony Stark in Iron Man, except my
+              iron suit is still in the final stages of production.
             </p>
           </div>
           <div className="flow-chart">
@@ -168,19 +172,24 @@ export default function IntroSection({ elementsRef }) {
         </div>
         <div className="training-section">
           <div className="summary">
-            <h2 className="summary-heading">TRAINING EXPERIENCE</h2>
+            <h2 className="summary-heading">
+              MY SUPERPOWERS: ALL SKILLS NO FRILLS
+            </h2>
             <p className="summary-desc">
-              I specialize in coaching{" "}
-              <span>
-                corporate professionals and students who are passionate about
-                graphic and web design,
-              </span>{" "}
-              proficient in various CMS software, and adept in the Adobe Suite.
-              My training program culminates in the prestigious{" "}
-              <span>JNNYCET certification,</span> validating their expertise and
-              empowering them for success in the dynamic fields of design and
-              technology.
+              I’m also a big big fan of Deadpool, but I’ve not listed sweet talk
+              as a skill here.
             </p>
+            <p className="summary-desc">
+              I just don’t design beautiful websites (I do that with my eyes
+              closed); I also make sure they become pally pally with those
+              sneaky Google bots.
+            </p>
+            <p className="summary-desc">
+              In plain English, I’m also good with SEO, I’ll ensure your website
+              ranks high in SERPs. You know the saying - If it’s not on page 1,
+              it’s on page ‘Never’.
+            </p>
+            <p>You’ve got the whole package, my friend!</p>
           </div>
           <div className="flow-chart">
             <div className="flow-chart-card">

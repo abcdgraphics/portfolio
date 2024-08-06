@@ -3,7 +3,7 @@ export default function BrandProjects({ elementsRef }) {
     <div
       id="brand"
       data-name="BRAND"
-      ref={(el) => (elementsRef.current[4] = el)}
+      ref={(el) => (elementsRef.current[6] = el)}
       className="brand-projects-showcase">
       <img src="/projects/brand-1.png" />
       <img src="/projects/brand-2.jpg" />

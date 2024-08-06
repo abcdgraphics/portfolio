@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CanvasRevealEffect } from "../components/ui/CanvasRevealEffect";
 import Card from "../components/ui/Card";
+import { Link } from "react-router-dom";
 
 export default function IndexSection({ elementsRef }) {
   const [hovered, setHovered] = useState(false);
@@ -9,13 +10,23 @@ export default function IndexSection({ elementsRef }) {
     <div
       id="index"
       data-name=""
-      ref={(el) => (elementsRef.current[6] = el)}
+      ref={(el) => (elementsRef.current[1] = el)}
       className="index-container">
-      <div className="index-container-content">
-        It has survived not only five centuries, but also the leap into
-        electronic typesetting, remaining essentially unchanged. It was
-        popularised in the 1960s with the release of Letraset sheets containing
-        Lorem Ipsum passages, and more recently with desktop publishing software
+      <h2 className="index-container-heading">
+        As you scroll through, I'll take you along with me on a journey of
+        design excellence, showcase a few projects that I'm proud of, and in the
+        process, we'll get to know each other a little better.
+      </h2>
+      <p className="index-container-content">
+        Step-by-step let’s explore the possibilities, and if all the stars
+        align, our conversation will have actual words that we'll exchange over
+        a phone call.
+      </p>
+      <div className="index-container-buttons">
+        <button>Brace Yourself!</button>
+        <a href="#intro">
+          <button>Who am I</button>
+        </a>
       </div>
       <div className="index">
         <Card title="INTRO" icon="/index-icons/intro.svg" link="#intro">
