@@ -7,7 +7,7 @@ export default function IntroSection({ elementsRef }) {
       data-name="INTRO"
       ref={(el) => (elementsRef.current[2] = el)}
       className="intro-container">
-      <div className="intro-profile">
+      <div data-option="fade-in" className="intro-profile fade-out animate">
         <img className="profile-pic" src="/profile.png" />
         <p className="intro-profile-name">AKHIL BANDARU</p>
         <p className="age">34 YEARS</p>
@@ -38,7 +38,7 @@ export default function IntroSection({ elementsRef }) {
       </div>
       <div className="intro-details">
         <div className="career-section">
-          <div className="summary">
+          <div data-option="fade-in" className="summary fade-out animate">
             <h2 className="summary-heading">WHO AM I?</h2>
             <p className="summary-desc">
               The world knows me as <span>Akhil Bandaru</span>. I’m a man of
@@ -53,7 +53,7 @@ export default function IntroSection({ elementsRef }) {
               iron suit is still in the final stages of production.
             </p>
           </div>
-          <div className="flow-chart">
+          <div data-option="fade-in" className="flow-chart fade-out animate">
             <div className="flow-chart-card">
               <div className="flow-chart-card-column-1">
                 <div className="flow-chart-year">2024</div>
@@ -170,8 +170,8 @@ export default function IntroSection({ elementsRef }) {
             </div>
           </div>
         </div>
-        <div className="training-section">
-          <div className="summary">
+        <div className="training-section ">
+          <div data-option="fade-in" className="summary fade-out animate">
             <h2 className="summary-heading">
               MY SUPERPOWERS: ALL SKILLS NO FRILLS
             </h2>
@@ -191,7 +191,7 @@ export default function IntroSection({ elementsRef }) {
             </p>
             <p>You’ve got the whole package, my friend!</p>
           </div>
-          <div className="flow-chart">
+          <div data-option="fade-in" className="flow-chart fade-out animate">
             <div className="flow-chart-card">
               <div className="flow-chart-card-column-1">
                 <div className="flow-chart-year">2013</div>

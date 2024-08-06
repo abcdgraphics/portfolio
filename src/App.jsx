@@ -13,6 +13,7 @@ import Cursor from "./components/Cursor";
 import Connect from "./components/Connect";
 import Contact from "./components/Contact";
 import Social from "./components/Social";
+import Animate from "./components/animate";
 
 function App() {
   const elementsRef = useRef([]);
@@ -54,6 +55,7 @@ function App() {
       <ThankyouSection />
       <CookieConsent />
       <Cursor />
+      <Animate />
     </>
   );
 }

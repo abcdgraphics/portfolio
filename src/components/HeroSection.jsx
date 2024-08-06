@@ -14,7 +14,9 @@ export default function HeroSection({ elementsRef }) {
           </div>
         </div>
         <div>
-          <h1 className="portfolio-title">
+          <h1
+            data-option="strip-slide-up"
+            className="portfolio-title animate strip-slide-up">
             AKHIL BANDARU <br /> CREATIVE DESIGNER
           </h1>
           <div className="portfolio-title-design">
@@ -30,18 +32,28 @@ export default function HeroSection({ elementsRef }) {
       </div>
       <div className="hero-nav-row">
         <div className="flip-word-col">
-          <h2 className="flip-word-heading">
+          <h2
+            data-option="strip-slide-up"
+            className="flip-word-heading animate strip-slide-up">
             LET THE
             <br />
             MAGIC UNFOLD!
           </h2>
-          <p className="flip-word-sub-heading">HELLO VISITOR!</p>
-          <p className="flip-word-content">
+          <p
+            data-option="fade-in"
+            className="fade-out flip-word-sub-heading animate">
+            HELLO VISITOR!
+          </p>
+          <p
+            data-option="fade-in"
+            className="fade-out flip-word-content animate">
             Howdy, my friend <i>(yes, I'll call you that henceforth).</i> Thanks
             for stopping by my website, well, this is actually much more than
             just a website.
           </p>
-          <p className="flip-word-content">
+          <p
+            data-option="fade-in"
+            className="fade-out flip-word-content animate">
             Consider this to be a portal{" "}
             <i>(you guessed it, I've watched too many sci-fi movies)</i> to dive
             into my world. A world of design possibilities, a place of magic,

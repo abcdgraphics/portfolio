@@ -12,23 +12,29 @@ export default function IndexSection({ elementsRef }) {
       data-name=""
       ref={(el) => (elementsRef.current[1] = el)}
       className="index-container">
-      <h2 className="index-container-heading">
+      <h2
+        data-option="fade-in"
+        className="fade-out index-container-heading animate">
         As you scroll through, I'll take you along with me on a journey of
         design excellence, showcase a few projects that I'm proud of, and in the
         process, we'll get to know each other a little better.
       </h2>
-      <p className="index-container-content">
+      <p
+        data-option="fade-in"
+        className="index-container-content fade-out animate">
         Step-by-step let’s explore the possibilities, and if all the stars
         align, our conversation will have actual words that we'll exchange over
         a phone call.
       </p>
-      <div className="index-container-buttons">
+      <div
+        data-option="fade-in"
+        className="index-container-buttons fade-out animate">
         <button>Brace Yourself!</button>
         <a href="#intro">
           <button>Who am I</button>
         </a>
       </div>
-      <div className="index">
+      <div data-option="fade-in" className="index fade-out animate">
         <Card title="INTRO" icon="/index-icons/intro.svg" link="#intro">
           <CanvasRevealEffect
             animationSpeed={3}
