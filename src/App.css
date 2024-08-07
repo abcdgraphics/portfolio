@@ -126,7 +126,7 @@ section {
 
 body {
   line-height: 1;
-  cursor: none !important;
+  cursor: none ;
   position: relative;
 }
 
@@ -1113,6 +1113,7 @@ li {
   border-radius: 50%;
   pointer-events: none;
   opacity: 1;
+  transition: width 0.3s linear, height 0.3s linear;
 }
 
 #dot {
@@ -1127,6 +1128,7 @@ li {
   border-radius: 50%;
   pointer-events: none;
   opacity: 1;
+  transition: width 0.3s linear, height 0.3s linear;
 }
 
 .flip-word-content{
@@ -1372,4 +1374,24 @@ form button{
 
 .fadeIn {
   opacity: 1;
+}
+
+body.custom-cursor{
+  cursor: url("/nav.svg") 15 15, auto;
+}
+
+body.custom-cursor #magic-cursor #ball {
+  width: 150px;
+  height: 150px;
+  background-color: #ed7d31;
+  transition: width 0.3s linear, height 0.3s linear;
+}
+
+body.custom-cursor #magic-cursor #dot {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 10;
+  transition: width 0.3s linear, height 0.3s linear;
 }

@@ -1,7 +1,22 @@
+import { useEffect } from "react";
+
 export default function HeroSection({ elementsRef }) {
+  function customCursor() {
+    document.body.classList.add("custom-cursor");
+  }
+
+  function defaultCursor() {
+    document.body.classList.remove("custom-cursor");
+  }
+
   return (
     <div
       data-name=""
+      onMouseOver={customCursor}
+      onMouseLeave={defaultCursor}
+      onClick={() => {
+        window.location.href = "#index";
+      }}
       ref={(el) => (elementsRef.current[0] = el)}
       className="hero-section">
       <div className="hero-profile-row">

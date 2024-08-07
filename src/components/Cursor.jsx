@@ -47,7 +47,7 @@ export default function Cursor() {
   }, [mouse.x, mouse.y, dotSensitivity, ballSensitivity, active]);
 
   return (
-    <div id="magic-cursor">
+    <div id="magic-cursor" className="hovered">
       <div ref={dotRef} id="dot"></div>
       <div ref={ballRef} id="ball"></div>
     </div>
