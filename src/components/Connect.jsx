@@ -1,4 +1,6 @@
 import { saveAs } from "file-saver";
+import CardStack from "../components/ui/CardStack.tsx";
+import { cn } from "../libs/utils.ts";
 
 export default function Connect({ elementsRef }) {
   const downloadPdf = () => {
@@ -12,6 +14,47 @@ export default function Connect({ elementsRef }) {
       })
       .catch((error) => console.error("Error downloading the File:", error));
   };
+
+  const CARDS = [
+    {
+      id: 0,
+      name: "Manu Arora",
+      designation: "Senior Software Engineer",
+      content: (
+        <p>
+          These cards are amazing, <Highlight>I want to use them</Highlight> in
+          my project. Framer motion is a godsend ngl tbh fam 🙏
+        </p>
+      ),
+    },
+    {
+      id: 1,
+      name: "Elon Musk",
+      designation: "Senior Shitposter",
+      content: (
+        <p>
+          I dont like this Twitter thing,{" "}
+          <Highlight>deleting it right away</Highlight> because yolo. Instead, I
+          would like to call it <Highlight>X.com</Highlight> so that it can
+          easily be confused with adult sites.
+        </p>
+      ),
+    },
+    {
+      id: 2,
+      name: "Tyler Durden",
+      designation: "Manager Project Mayhem",
+      content: (
+        <p>
+          The first rule of
+          <Highlight>Fight Club</Highlight> is that you do not talk about fight
+          club. The second rule of
+          <Highlight>Fight club</Highlight> is that you DO NOT TALK about fight
+          club.
+        </p>
+      ),
+    },
+  ];
 
   return (
     <div
@@ -40,20 +83,39 @@ export default function Connect({ elementsRef }) {
           </p>
           <p className="last">C’mon it's time to connect</p>
         </div>
-        <div className="lets-connect-col-2">
-          <div className="profile-name-design">
-            <div className="line"></div>
-            <div className="round">
-              <div></div>
+        <div className="connect-col-2">
+          <div className="connect-col-2-1">
+            <div className="lets-connect-col-2">
+              <div className="profile-name-design">
+                <div className="line"></div>
+                <div className="round">
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div className="lets-connect-col-3">
+              <button onClick={downloadPdf} className="resume-download">
+                Download Resume
+              </button>
             </div>
           </div>
-        </div>
-        <div className="lets-connect-col-3">
-          <button onClick={downloadPdf} className="resume-download">
-            Download Resume
-          </button>
+          <div className="connect-col-2-2">
+            <CardStack items={CARDS} />
+          </div>
         </div>
       </div>
     </div>
+  );
+}
+
+function Highlight({ children, className }) {
+  return (
+    <span
+      className={cn(
+        "font-bold bg-emerald-100 text-emerald-700 dark:bg-emerald-700/[0.2] dark:text-emerald-500 px-1 py-0.5",
+        className
+      )}>
+      {children}
+    </span>
   );
 }
