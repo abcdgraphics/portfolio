@@ -20,21 +20,23 @@ function App() {
   const [name, setName] = useState("");
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const attribute = entry.target.getAttribute("data-name");
+    const handleScroll = () => {
+      elementsRef.current.forEach((element) => {
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 400) {
+            const attribute = element.getAttribute("data-name");
             setName(attribute);
           }
-        });
-      },
-      { threshold: 0.2 }
-    );
+        }
+      });
+    };
 
-    elementsRef.current.forEach((element) => {
-      if (element) observer.observe(element);
-    });
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (

@@ -1,7 +1,7 @@
 export default function PackagingProjects({ elementsRef }) {
   return (
     <div
-      id="extra"
+      id="packaging"
       data-name="PACKAGING"
       ref={(el) => (elementsRef.current[7] = el)}
       className="packaging-projects-showcase">
