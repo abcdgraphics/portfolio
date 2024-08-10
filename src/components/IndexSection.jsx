@@ -4,29 +4,45 @@ import Card from '../components/ui/Card';
 import { Link } from 'react-router-dom';
 
 const cardsData = [
-  { title: 'INTRO', icon: '/index-icons/intro.svg', link: '#intro' },
-  { title: 'WEB', icon: '/index-icons/web.svg', link: '#web' },
+  { title: 'UI/UX', icon: '/index-icons/ui-ux.svg', link: '#ui-ux' },
+  { title: 'WEBSITES', icon: '/index-icons/web.svg', link: '#websites' },
+  { title: 'BRANDING', icon: '/index-icons/brand.svg', link: '#branding' },
+  {
+    title: 'INFOGRAPHICS',
+    icon: '/index-icons/infographics.svg',
+    link: '#print',
+  },
   { title: 'SOCIAL', icon: '/index-icons/social.svg', link: '#social' },
+  { title: 'CAROUSELS', icon: '/index-icons/carousel.svg', link: '#carousels' },
   { title: 'PRINT', icon: '/index-icons/print.svg', link: '#print' },
-  { title: 'BRAND', icon: '/index-icons/brand.svg', link: '#brand' },
-  { title: 'EXTRA', icon: '/index-icons/extra.svg', link: '#extra' },
-  { title: 'CONTACT', icon: '/index-icons/contact.svg', link: '#contact' },
+  { title: 'DOCUMENTS', icon: '/index-icons/document.svg', link: '#documents' },
+  {
+    title: 'PACKAGING',
+    icon: '/index-icons/packaging.svg',
+    link: '#packaging',
+  },
+  {
+    title: 'PRESENTATIONS',
+    icon: '/index-icons/presentation.svg',
+    link: '#presentations',
+  },
 ];
 
 const colors = [
-  [236, 72, 153],
-  [232, 121, 249],
+  [237, 125, 49],
+  [221, 160, 190],
+  [129, 179, 226],
 ];
 
 const CardComponent = ({ title, icon, link }) => (
   <Card title={title} icon={icon} link={link}>
     <CanvasRevealEffect
       animationSpeed={3}
-      containerClassName='bg-black'
+      containerClassName='#ed7d31'
       colors={colors}
-      dotSize={2}
+      dotSize={3}
     />
-    <div className='absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90' />
+    <div className='absolute inset-0 bg-gradient-radial from-white-500 to-purple-600 [mask-image:radial-gradient(400px_at_center,white,transparent)] opacity-80 dark:opacity-90' />
   </Card>
 );
 
@@ -39,7 +55,7 @@ CardComponent.propTypes = {
 export default function IndexSection({ elementsRef }) {
   return (
     <div
-      id='index'
+      id='my-expertise'
       ref={(el) => (elementsRef.current[1] = el)}
       className='index-container'
     >
@@ -63,14 +79,16 @@ export default function IndexSection({ elementsRef }) {
         data-option='fade-in'
         className='index-container-buttons fade-out animate'
       >
-        <button>Brace Yourself!</button>
         <Link to='#intro'>
           <button>Who am I</button>
         </Link>
       </div>
-      <div data-option='fade-in' className='index fade-out animate'>
-        {cardsData.map((card) => (
-          <CardComponent key={card.title} {...card} />
+      <div
+        data-option='fade-in'
+        className='index fade-out animate grid grid-cols-5 gap-5'
+      >
+        {cardsData.map((card, index) => (
+          <CardComponent key={index} {...card} />
         ))}
       </div>
     </div>

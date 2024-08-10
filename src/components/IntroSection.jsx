@@ -1,51 +1,85 @@
-import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+
+// Function to calculate experience in years and months
+const calculateExperience = (startDate, endDate = new Date()) => {
+  const start = new Date(startDate);
+  const end = new Date(endDate);
+
+  const years = end.getFullYear() - start.getFullYear();
+  const months = end.getMonth() - start.getMonth();
+
+  const totalMonths = years * 12 + months;
+  const displayYears = Math.floor(totalMonths / 12);
+  const displayMonths = totalMonths % 12;
+  const decimalMonths = (displayMonths / 12).toFixed(1);
+
+  return `${displayYears + parseFloat(decimalMonths)} YEARS`;
+};
 
 export default function IntroSection({ elementsRef }) {
   return (
     <div
-      id="intro"
-      data-name="INTRO"
+      id='intro'
+      data-name='WHO AM I'
       ref={(el) => (elementsRef.current[2] = el)}
-      className="intro-container">
-      <div data-option="fade-in" className="intro-profile fade-out animate">
-        <img className="profile-pic" src="/profile.png" />
-        <p className="intro-profile-name">AKHIL BANDARU</p>
-        <p className="age">34 YEARS</p>
-        <div className="divider"></div>
-        <div className="social-links">
-          <div className="link">
-            <img className="facebook-icon" src="/social-icons/facebook.svg" />
+      className='intro-container'
+    >
+      <div data-option='fade-in' className='intro-profile fade-out animate'>
+        <img className='profile-pic' src='/profile.png' alt='Profile' />
+        <p className='intro-profile-name'>AKHIL BANDARU</p>
+        <p className='age'>34 YEARS</p>
+        <div className='divider'></div>
+        <div className='social-links'>
+          <div className='link'>
+            <img
+              className='facebook-icon'
+              src='/social-icons/facebook.svg'
+              alt='Facebook'
+            />
           </div>
-          <div className="link">
-            <img className="behance-icon" src="/social-icons/behance.svg" />
+          <div className='link'>
+            <img
+              className='behance-icon'
+              src='/social-icons/behance.svg'
+              alt='Behance'
+            />
           </div>
-          <div className="link">
-            <img className="linkedin-icon" src="/social-icons/linkedin.svg" />
+          <div className='link'>
+            <img
+              className='linkedin-icon'
+              src='/social-icons/linkedin.svg'
+              alt='LinkedIn'
+            />
           </div>
-          <div className="link">
-            <img className="instagram-icon" src="/social-icons/instagram.svg" />
+          <div className='link'>
+            <img
+              className='instagram-icon'
+              src='/social-icons/instagram.svg'
+              alt='Instagram'
+            />
           </div>
         </div>
-        <p className="phone">
-          <a href="tel:+919701253249">+91 970 125 3249</a>
+        <p className='phone'>
+          <a href='tel:+919701253249'>+91 970 125 3249</a>
         </p>
-        <p className="email">
-          <a href="mailto:akhilbandaru@gmail.com">akhilbandaru@gmail.com</a>
+        <p className='email'>
+          <a href='mailto:akhilbandaru@gmail.com'>akhilbandaru@gmail.com</a>
         </p>
-        <Link href="/" className="website">
+        <Link to='/' className='website'>
           www.abcd.graphics
         </Link>
       </div>
-      <div className="intro-details">
-        <div className="career-section">
-          <div data-option="fade-in" className="summary fade-out animate">
-            <h2 className="summary-heading">WHO AM I?</h2>
-            <p className="summary-desc">
+      <div className='intro-details'>
+        <div className='career-section'>
+          <div data-option='fade-in' className='summary fade-out animate'>
+            <h2 className='summary-heading'>WHO AM I?</h2>
+            <p className='summary-desc'>
               The world knows me as <span>Akhil Bandaru</span>. I’m a man of
               many talents (bragging rights reserved) with over a decade of
               experience in crafting captivating digital and print media.
             </p>
-            <p className="summary-desc">
+            <p className='summary-desc'>
               I excel in leading design teams and orchestrating projects from
               visionary inception to completion. Skilled in a plethora of design
               tools and technologies, I have an uncanny knack for embracing and
@@ -53,18 +87,24 @@ export default function IntroSection({ elementsRef }) {
               iron suit is still in the final stages of production.
             </p>
           </div>
-          <div data-option="fade-in" className="flow-chart fade-out animate">
-            <div className="flow-chart-card">
-              <div className="flow-chart-card-column-1">
-                <div className="flow-chart-year">2024</div>
-                <div className="decor">
+          <div data-option='fade-in' className='flow-chart fade-out animate'>
+            <div>
+              <h2 className='total-experience-heading'>
+                TOTAL {calculateExperience('2013-05-13')} OF EXPERIENCE
+              </h2>
+            </div>
+            <div className='flow-chart-card'>
+              <div className='flow-chart-card-column-1'>
+                <div className='flow-chart-year'>2024</div>
+                <div className='decor'>
                   <div></div>
                 </div>
               </div>
-              <div className="flow-chart-num">01</div>
-              <div className="flow-chart-card-details">
+              <div className='flow-chart-num'>01</div>
+              <div className='flow-chart-card-details'>
                 <h3>
-                  R&D Engineer, Innovation Labs <span> [ AT PRESENT ]</span>
+                  R&D Engineer, Innovation Labs{' '}
+                  <span> [ {calculateExperience('2024-02-01')} ]</span>
                 </h3>
                 <p>Tredence Data Analytics Solutions Pvt Ltd</p>
                 <ul>
@@ -85,18 +125,21 @@ export default function IntroSection({ elementsRef }) {
                 </ul>
               </div>
             </div>
-            <div className="flow-chart-card">
-              <div className="flow-chart-card-column-1">
-                <div className="flow-chart-year">2020</div>
-                <div className="decor">
+            <div className='flow-chart-card'>
+              <div className='flow-chart-card-column-1'>
+                <div className='flow-chart-year'>2020</div>
+                <div className='decor'>
                   <div></div>
                 </div>
               </div>
-              <div className="flow-chart-num">02</div>
-              <div className="flow-chart-card-details">
+              <div className='flow-chart-num'>02</div>
+              <div className='flow-chart-card-details'>
                 <h3>
-                  Associate Manager – Graphic Designer{" "}
-                  <span> [ 3.6 YEARS ]</span>
+                  Associate Manager – Graphic Designer{' '}
+                  <span>
+                    {' '}
+                    [ {calculateExperience('2020-07-08', '2024-01-31')} ]
+                  </span>
                 </h3>
                 <p>Tredence Data Analytics Solutions Pvt Ltd</p>
                 <ul>
@@ -115,18 +158,21 @@ export default function IntroSection({ elementsRef }) {
                 </ul>
               </div>
             </div>
-            <div className="flow-chart-card">
-              <div className="flow-chart-card-column-1">
-                <div className="flow-chart-year">2019</div>
-                <div className="decor">
+            <div className='flow-chart-card'>
+              <div className='flow-chart-card-column-1'>
+                <div className='flow-chart-year'>2019</div>
+                <div className='decor'>
                   <div></div>
                 </div>
               </div>
-              <div className="flow-chart-num">03</div>
-              <div className="flow-chart-card-details">
+              <div className='flow-chart-num'>03</div>
+              <div className='flow-chart-card-details'>
                 <h3>
-                  Specialist in Web Design & Development{" "}
-                  <span> [ 4 MONTHS ]</span>
+                  Specialist in Web Design & Development{' '}
+                  <span>
+                    {' '}
+                    [ {calculateExperience('2019-12-09', '2020-04-15')} ]
+                  </span>
                 </h3>
                 <p>Jiffle Technologies Pvt. Ltd.</p>
                 <ul>
@@ -141,66 +187,77 @@ export default function IntroSection({ elementsRef }) {
                 </ul>
               </div>
             </div>
-            <div className="flow-chart-card">
-              <div className="flow-chart-card-column-1">
-                <div className="flow-chart-year">2018</div>
-                <div className="decor">
+            <div className='flow-chart-card'>
+              <div className='flow-chart-card-column-1'>
+                <div className='flow-chart-year'>2018</div>
+                <div className='decor'>
                   <div></div>
                 </div>
               </div>
-              <div className="flow-chart-num">04</div>
-              <div className="flow-chart-card-details">
+              <div className='flow-chart-num'>04</div>
+              <div className='flow-chart-card-details'>
                 <h3>
-                  Webmaster <span> [ 1.4 YEARS ]</span>
+                  Webmaster{' '}
+                  <span>
+                    {' '}
+                    [ {calculateExperience('2018-08-01', '2019-12-08')} ]
+                  </span>
                 </h3>
                 <p>Kalki Communication Technology Pvt. Ltd.</p>
               </div>
             </div>
-            <div className="flow-chart-card">
-              <div className="flow-chart-card-column-1">
-                <div className="flow-chart-year">2013</div>
+            <div className='flow-chart-card'>
+              <div className='flow-chart-card-column-1'>
+                <div className='flow-chart-year'>2013</div>
               </div>
-              <div className="flow-chart-num">05</div>
-              <div className="flow-chart-card-details">
+              <div className='flow-chart-num'>05</div>
+              <div className='flow-chart-card-details'>
                 <h3>
-                  Technical Trainer <span> [ 5+ YEARS ]</span>
+                  Technical Trainer{' '}
+                  <span>
+                    {' '}
+                    [ {calculateExperience('2013-05-13', '2018-05-27')} ]
+                  </span>
                 </h3>
                 <p>Visakha Fire And Security Services.</p>
               </div>
             </div>
           </div>
         </div>
-        <div className="training-section ">
-          <div data-option="fade-in" className="summary fade-out animate">
-            <h2 className="summary-heading">
+        <div className='training-section '>
+          <div data-option='fade-in' className='summary fade-out animate'>
+            <h2 className='summary-heading'>
               MY SUPERPOWERS: ALL SKILLS NO FRILLS
             </h2>
-            <p className="summary-desc">
+            <p className='summary-desc'>
               I’m also a big big fan of Deadpool, but I’ve not listed sweet talk
               as a skill here.
             </p>
-            <p className="summary-desc">
+            <p className='summary-desc'>
               I just don’t design beautiful websites (I do that with my eyes
               closed); I also make sure they become pally pally with those
               sneaky Google bots.
             </p>
-            <p className="summary-desc">
+            <p className='summary-desc'>
               In plain English, I’m also good with SEO, I’ll ensure your website
               ranks high in SERPs. You know the saying - If it’s not on page 1,
               it’s on page ‘Never’.
             </p>
             <p>You’ve got the whole package, my friend!</p>
           </div>
-          <div data-option="fade-in" className="flow-chart fade-out animate">
-            <div className="flow-chart-card">
-              <div className="flow-chart-card-column-1">
-                <div className="flow-chart-year">2013</div>
-                <div className="decor">
+          <div data-option='fade-in' className='flow-chart fade-out animate'>
+            <div>
+              <h2 className='total-experience-heading'>EDUCATION BACKGROUND</h2>
+            </div>
+            <div className='flow-chart-card'>
+              <div className='flow-chart-card-column-1'>
+                <div className='flow-chart-year'>2013</div>
+                <div className='decor'>
                   <div></div>
                 </div>
               </div>
-              <div className="flow-chart-num">01</div>
-              <div className="flow-chart-card-details">
+              <div className='flow-chart-num'>01</div>
+              <div className='flow-chart-card-details'>
                 <h3>
                   PGDM – Game Designing
                   <span> [ TEXTURING & MODELING ]</span>
@@ -228,16 +285,16 @@ export default function IntroSection({ elementsRef }) {
                 </ul>
               </div>
             </div>
-            <div className="flow-chart-card">
-              <div className="flow-chart-card-column-1">
-                <div className="flow-chart-year">2011</div>
-                <div className="decor">
+            <div className='flow-chart-card'>
+              <div className='flow-chart-card-column-1'>
+                <div className='flow-chart-year'>2011</div>
+                <div className='decor'>
                   <div></div>
                 </div>
-                <div className="flow-chart-year">2007</div>
+                <div className='flow-chart-year'>2007</div>
               </div>
-              <div className="flow-chart-num">02</div>
-              <div className="flow-chart-card-details">
+              <div className='flow-chart-num'>02</div>
+              <div className='flow-chart-card-details'>
                 <h3>B. Tech - Information Technology</h3>
                 <p>Avanthi College Of Engineering And Technology.</p>
                 <ul>
@@ -256,7 +313,7 @@ export default function IntroSection({ elementsRef }) {
             </div>
           </div>
         </div>
-        <div className="skill-set">
+        <div className='skill-set'>
           <h2>SKILL SET</h2>
           <table>
             <thead>
@@ -289,7 +346,7 @@ export default function IntroSection({ elementsRef }) {
                 <td>Frontend CMS Tools</td>
                 <td>
                   WordPress, Drupal, Opencart, Martjack, Magento, Evolution
-                  Script and Datalife Engine
+                  Script, and Datalife Engine
                 </td>
               </tr>
               <tr>
@@ -311,3 +368,9 @@ export default function IntroSection({ elementsRef }) {
     </div>
   );
 }
+
+IntroSection.propTypes = {
+  elementsRef: PropTypes.shape({
+    current: PropTypes.arrayOf(PropTypes.object),
+  }).isRequired,
+};

@@ -3,7 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html,
 body,
 div,
@@ -99,6 +98,19 @@ a {
 button {
   font-size: 18px;
   cursor: none !important;
+}
+
+button {
+  background-color: #ed7d31;
+  padding: 12px 30px;
+  border-radius: 60px;
+  color: white;
+  width: 200px;
+  letter-spacing: 0px;
+  font-size: 16px;
+  font-weight: 500;
+  height: 55px;
+  margin: 20px 0px;
 }
 
 html {
@@ -277,8 +289,8 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .flip-word-heading {
@@ -1289,16 +1301,16 @@ li {
   padding-top: 10px;
 }
 
-.connect-col-2{
+.connect-col-2 {
   width: 100%;
 }
 
-.connect-col-2-2{
+.connect-col-2-2 {
   display: flex;
   justify-content: center;
 }
 
-.connect-col-2-1{
+.connect-col-2-1 {
   display: flex;
   margin-bottom: 100px;
   gap: 100px;
