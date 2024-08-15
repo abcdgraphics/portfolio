@@ -19,7 +19,12 @@ export default function HeroSection({ elementsRef }) {
           <h1
             data-option="strip-slide-up"
             className="portfolio-title animate strip-slide-up">
-            AKHIL BANDARU CREATIVE DESIGNER
+            AKHIL BANDARU
+          </h1>
+          <h1
+            data-option="strip-slide-up"
+            className="portfolio-title animate strip-slide-up">
+            CREATIVE DESIGNER
           </h1>
           <div className="portfolio-title-design">
             <div></div>
@@ -70,6 +75,9 @@ export default function HeroSection({ elementsRef }) {
           </a>
         </article>
       </nav>
+      {/* <div>
+        <img src="/bg-main-cropped.png" />
+      </div> */}
       <div className="navigation">
         <a href="#my-expertise">
           <div>

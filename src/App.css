@@ -252,7 +252,7 @@ main {
 .hero-section {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 800px;
   padding: 50px 100px;
   position: relative;
   background-image: url('/bg-main.png');
@@ -1496,3 +1496,4 @@ body.custom-cursor #magic-cursor #dot {
   z-index: 10;
   transition: width 0.3s linear, height 0.3s linear;
 }
+

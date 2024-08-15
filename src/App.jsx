@@ -49,13 +49,13 @@ function App() {
           <IntroSection elementsRef={elementsRef} />
           <ProjectsSection elementsRef={elementsRef} />
           <Connect elementsRef={elementsRef} />
-          <Contact elementsRef={elementsRef} />
-          <Social elementsRef={elementsRef} />
+          {/* <Contact elementsRef={elementsRef} /> */}
+          {/* <Social elementsRef={elementsRef} /> */}
         </div>
       </main>
-      <CreativeSection />
-      <ThankyouSection />
-      <CookieConsent />
+      {/* <CreativeSection /> */}
+      {/* <ThankyouSection /> */}
+      {/* <CookieConsent /> */}
       <Cursor />
       <Animate />
     </>
