@@ -348,8 +348,7 @@ export default function IntroSection({ elementsRef }) {
             <div className="flow-chart-card">
               <div className="profile-num-holder">
                 <div className="flow-chart-card-column-1">
-                  {/* <div className="flow-chart-year">2011</div> */}
-                  <div className="flow-chart-year">2007</div>
+                  <div className="flow-chart-year">2011</div>
                   <div className="decor">
                     <div></div>
                   </div>
@@ -381,11 +380,12 @@ export default function IntroSection({ elementsRef }) {
                 </div>
               </div>
             </div>
+            <div className="flow-chart-year">2007</div>
           </div>
         </div>
         <div className="skill-set">
           <h2>SKILL SET</h2>
-          {/* <table>
+          <table>
             <thead>
               <tr>
                 <th>S.NO</th>
@@ -432,7 +432,7 @@ export default function IntroSection({ elementsRef }) {
                 </td>
               </tr>
             </tbody>
-          </table> */}
+          </table>
         </div>
       </div>
     </div>

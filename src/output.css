@@ -2202,6 +2202,7 @@ main {
   color: white;
   padding: 5px 25px;
   margin-top: 8px;
+  width: fit-content;
 }
 
 .flow-chart-num {
@@ -2261,6 +2262,7 @@ main {
 
 table {
   width: 100%;
+  /* min-width: 600px; */
 }
 
 thead th {
@@ -2544,6 +2546,7 @@ li {
 
 .creative-section {
   display: flex;
+  max-height: fit-content;
   flex-direction: column;
   align-items: center;
   border-top: 1px solid #00000014;
@@ -2590,8 +2593,8 @@ li {
 .end-cards-section > div:first-child {
   background-color: #ed7d31;
   border-radius: 10px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   padding: 50px;
   color: white;
   gap: 30px;
@@ -2640,6 +2643,7 @@ li {
 
 .end-card {
   padding: 0px 30px;
+  flex: 1;
 }
 
 .cookie-consent {
@@ -2649,21 +2653,24 @@ li {
   right: 50px;
   background-color: white;
   display: flex;
+  align-items: center;
   gap: 50px;
   border-radius: 10px;
   max-width: 500px;
   z-index: 1000;
+  width: fit-content;
 }
 
 .cookie-consent button {
   border: 1px solid #ed7d31;
   border-radius: 60px;
-  padding: 10px 25px;
+  padding: 0px 25px;
   width: 100px;
   position: relative;
   overflow: hidden;
   cursor: none;
   height: 50px;
+  margin: 0;
 }
 
 .btn-ani-bg {
@@ -2784,7 +2791,8 @@ li {
 }
 
 .lets-connect-container {
-  height: 100vh;
+  min-height: 100vh;
+  max-height: fit-content;
   padding: 50px 100px;
   display: flex;
   border-top: 1px solid #00000014;
@@ -2879,6 +2887,12 @@ form input {
   font-size: 16px;
   height: 60px;
   border-radius: 40px;
+  min-width: 350px;
+  max-width: 350px;
+}
+
+.tab-scroll{
+  width: 90%;
 }
 
 form input::-moz-placeholder {
@@ -2894,6 +2908,8 @@ form textarea {
   background-color: #eff1f7;
   font-size: 16px;
   border-radius: 20px;
+  min-width: 350px;
+  max-width: 350px;
 }
 
 form textarea::-moz-placeholder {
@@ -2911,6 +2927,8 @@ form button {
   margin-top: 20px;
   width: 60%;
   color: white;
+  min-width: 240px;
+  max-width: 240px;
 }
 
 .strip-slide-up {
@@ -3186,6 +3204,18 @@ button {
   display: none;
 }
 
+.creative-section-top-heading{
+  width: 600px;
+}
+
+.mobile-nav{
+  display: none;
+}
+
+.mobile-menu{
+  display: none;
+}
+
 
 /* Responsive Code */
 @media screen and (max-width: 1850px) {
@@ -3253,6 +3283,55 @@ button {
   .index-container{
     padding-left: 50px;
     padding-right: 50px
+  }
+}
+
+@media screen and (max-width: 1390px) {
+  .lets-connect-container > div{
+    flex-direction: column;
+  }
+
+  .lets-connect-col-2{
+    display: none;
+  }
+
+  .lets-connect-col-1{
+    width: 100%;
+  }
+
+  .lets-connect-col-1 h2{
+    text-align: center;
+    font-size: 50px;
+  }
+
+  .lets-connect-col-1 p{
+    text-align: center;
+  }
+
+  .lets-connect-col-3{
+    width: unset;
+  }
+
+  .lets-connect-container{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .connect-col-2-1{
+    margin-bottom: 30px;
+  }
+
+  form{
+    align-items: center;
+    padding-right: 0px;
+  }
+
+  .lets-connect-col-3 .social-links{
+    justify-content: center;
+  }
+
+  .box-slides{
+    display: none;
   }
 }
 
@@ -3467,12 +3546,42 @@ button {
   .packaging-projects-showcase {
     grid-template-columns: 1fr;
   }
+
+  .thankyou-section h2{
+    font-size: 100px;
+    line-height: 100px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container-scroll-row{
+    margin-top: 100px;
+  }
 }
 
 @media screen and (max-width: 750px) {
   .navigation{
     width: 100px;
     height: 100px;
+  }
+
+  .end-card{
+    border-right: 0px;
+    border-bottom: 1px solid #ffd0d0;
+    padding-bottom: 30px;
+  }
+
+  .end-cards-section > div:first-child > div:last-child{
+    border: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .cookie-consent{
+    right: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 360px;
   }
 }
 
@@ -3488,6 +3597,28 @@ button {
   .flip-word-heading{
     font-size: 38px;
   }
+
+  .lets-connect-col-1 h2{
+    font-size: 38px;
+    line-height: 38px;
+  }
+
+  .creative-section-top-heading{
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: unset;
+  }
+
+  .thankyou-details{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .thankyou-section p{
+    text-align: center;
+  }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -3497,6 +3628,11 @@ button {
 }
 
 @media screen and (max-width: 550px) {
+
+  #my-expertise, #intro, #works, #ecm, #contact{
+    scroll-margin-top: 100px;
+  }
+
   .fixed-side-bar{
     width: 100vw;
     height: 100px;
@@ -3519,13 +3655,15 @@ button {
     display: none;
   }
 
-  .fixed-side-bar > div > a:last-child{
+  .logo-holder{
     order: -1;
+    width: 15%;
   }
 
   .logo{
     width: 80px;
-    height: 70px;
+    height: 50px;
+    
   }
 
   .hero-section{
@@ -3536,7 +3674,7 @@ button {
 
   .side-bar-dynamic-name{
     rotate: unset;
-    font-size: 28px;
+    font-size: 25px;
   }
 
   .intro-profile{
@@ -3611,6 +3749,105 @@ button {
 
   .projects-section h2{
     font-size: 24px;
+  }
+
+  .lets-connect-container{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .end-card{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .end-cards-section > div:first-child{
+    flex-direction: column;
+  }
+
+  .end-cards-heading{
+    font-size: 30px;
+  }
+
+  .end-cards-section{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .thankyou-section h2{
+    font-size: 70px;
+    line-height: 70px;
+  }
+
+  .projets-main-heading{
+    position: unset;
+  }
+
+  .mobile-nav{
+    display: flex;
+    justify-content: flex-end;
+    /* width: 15%; */
+  }
+
+  .mobile-nav img{
+    width: 20px;
+    height: 20px;
+  }
+
+  .fixed-side-bar > div > a:last-child{
+    order: -1;
+  }
+
+  .mobile-menu{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    background-color: #CAD5E8;
+    width: 100vw;
+    height: 100vh;
+    left: 100%;
+    padding:  20px;
+    z-index: 10000;
+    transition: all 0.5s linear;
+  }
+
+  .mobile-menu-nav-links{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ED7D31;
+    font-size: 30px;
+    font-weight: 900;
+  }
+
+  .mobile-menu-nav-links a{
+    margin-bottom: 10px;
+  }
+  .mobile-menu.active{
+    left: 0;
+  }
+
+  .mobile-menu-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cross{
+    width: 35px;
+    height: 35px;
+  }
+
+  .mobile-menu-logo{
+    width: 50px;
+    height: 50px;
+  }
+
+  table{
+    min-width: 600px;
   }
 }
 

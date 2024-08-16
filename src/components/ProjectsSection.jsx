@@ -6,7 +6,7 @@ import WebProjects from "./projects/WebProjects";
 
 export default function ProjectsSection({ elementsRef }) {
   return (
-    <div className="projects-section">
+    <div id="works" className="projects-section">
       <div className="projets-main-heading">
         <h2>PROJECTS THAT I’M PROUD OF</h2>
       </div>
