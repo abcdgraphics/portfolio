@@ -3630,12 +3630,12 @@ button {
 @media screen and (max-width: 550px) {
 
   #my-expertise, #intro, #works, #ecm, #contact{
-    scroll-margin-top: 100px;
+    scroll-margin-top: 80px;
   }
 
   .fixed-side-bar{
     width: 100vw;
-    height: 100px;
+    height: 80px;
     position: fixed;
     z-index: 50;
   }
@@ -3667,7 +3667,7 @@ button {
   }
 
   .hero-section{
-    margin-top: 100px;
+    margin-top: 80px;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -3865,9 +3865,51 @@ button {
   }
 }
 
+@media screen and (max-width: 350px) {
+  .end-cards-section > div:first-child{
+    padding: 20px;
+  }
+
+  form input, form textarea{
+    min-width: unset;
+    width: 100%;
+  }
+
+  .index{
+    gap: 15px;
+  }
+
+  .cookie-consent{
+    width: 90%;
+    min-width: unset;
+    gap: 10px;
+  }
+}
+
 @media screen and (max-width: 388px) {
   .profile-pic{
     width: 100px;
     height: 100px;
+  }
+}
+
+@media (min-width: 350px) and (max-width: 450px) {
+  .end-cards-section > div:first-child{
+    padding: 20px;
+  }
+
+  form input, form textarea{
+    min-width: unset;
+    width: 100%;
+  }
+
+  .index{
+    gap: 15px;
+  }
+
+  .cookie-consent{
+    width: 90%;
+    min-width: unset;
+    gap: 10px;
   }
 }
