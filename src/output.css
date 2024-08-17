@@ -3883,6 +3883,7 @@ button {
     width: 90%;
     min-width: unset;
     gap: 10px;
+    padding: 20px;
   }
 }
 
@@ -3911,5 +3912,6 @@ button {
     width: 90%;
     min-width: unset;
     gap: 10px;
+    padding: 20px;
   }
 }
