@@ -1,9 +1,9 @@
-export default function PrintProjects({ elementsRef }) {
+export default function Documents({ elementsRef }) {
   return (
     <div
-      id="collaterals"
-      data-name="COLLATERALS"
-      ref={(el) => (elementsRef.current[9] = el)}
+      id="documents"
+      data-name="DOCUMENTS"
+      ref={(el) => (elementsRef.current[10] = el)}
       className="print-projects-showcase">
       <img src="/projects/print-1.png" />
       <img src="/projects/print-2.png" />

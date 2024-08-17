@@ -1,9 +1,9 @@
-export default function PackagingProjects({ elementsRef }) {
+export default function Infographics({ elementsRef }) {
   return (
     <div
-      id="packaging"
-      data-name="PACKAGING"
-      ref={(el) => (elementsRef.current[11] = el)}
+      id="infographics"
+      data-name="INFOGRAPHICS"
+      ref={(el) => (elementsRef.current[12] = el)}
       className="packaging-projects-showcase">
       <img src="/projects/packaging-1.png" />
       <img src="/projects/packaging-2.png" />

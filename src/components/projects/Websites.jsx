@@ -1,9 +1,9 @@
-export default function WebProjects({ elementsRef }) {
+export default function Websites({ elementsRef }) {
   return (
     <div
-      id="apps"
-      data-name="WEB / MOBILE APPS"
-      ref={(el) => (elementsRef.current[3] = el)}
+      id="websites"
+      data-name="WEBSITES"
+      ref={(el) => (elementsRef.current[4] = el)}
       className="projects-showcase">
       <div>
         <div className="project-image-container">

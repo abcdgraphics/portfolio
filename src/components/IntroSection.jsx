@@ -64,14 +64,14 @@ export default function IntroSection({ elementsRef }) {
               />
             </div>
           </div>
-          <p className="phone">
+          {/* <p className="phone">
             <a href="tel:+919701253249">+91 970 125 3249</a>
-          </p>
+          </p> */}
           <p className="email">
-            <a href="mailto:akhilbandaru@gmail.com">akhilbandaru@gmail.com</a>
+            <a href="mailto:hello@abcd.graphics">hello@abcd.graphics</a>
           </p>
           <p className="website">
-            <Link to="/">www.abcd.graphics</Link>
+            <Link to="/">abcd.graphics</Link>
           </p>
         </div>
       </div>
@@ -80,9 +80,9 @@ export default function IntroSection({ elementsRef }) {
           <div data-option="fade-in" className="summary fade-out animate">
             <h2 className="summary-heading">WHO AM I?</h2>
             <p className="summary-desc">
-              The world knows me as Akhil Bandaru. I’m a man of many talents
-              (bragging rights reserved) with over a decade of experience in
-              crafting captivating digital and print media.
+              The world knows me as <span>Akhil Bandaru</span>. I’m a man of
+              many talents <i>(bragging rights reserved)</i> with over a decade
+              of experience in crafting captivating digital and print media.
             </p>
             <p className="summary-desc">
               I excel in leading design teams and orchestrating projects from
@@ -96,7 +96,7 @@ export default function IntroSection({ elementsRef }) {
               words, more visual. Here’s what has kept me busy all through these
               years, and the journey has been exciting all this while.
             </p>
-            <p>Come along, friend!</p>
+            <button>Come Along, Friend!</button>
           </div>
           <div data-option="fade-in" className="flow-chart fade-out animate">
             <div>
@@ -250,6 +250,25 @@ export default function IntroSection({ elementsRef }) {
                     </span>
                   </h3>
                   <p>Kalki Communication Technology Pvt. Ltd.</p>
+                  <ul>
+                    <li>
+                      Maintained and optimized three corporate websites in
+                      WordPress, ensuring seamless integration of Smart Grid
+                      solutions and enhancing user experience across digital
+                      platforms.
+                    </li>
+                    <li>
+                      Led the development, security, and scalability of
+                      web-based platforms, focusing on high-performance delivery
+                      of mission-critical information and services for energy
+                      utilities.
+                    </li>
+                    <li>
+                      Collaborated with leading utilities, OEMs, and system
+                      integrators, managing a global web presence and
+                      customizing content to address specific regional.
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -276,6 +295,26 @@ export default function IntroSection({ elementsRef }) {
                     </span>
                   </h3>
                   <p>Visakha Fire And Security Services.</p>
+                  <ul>
+                    <li>
+                      Worked as a Technical Trainer at Fire Engineering and
+                      Safety Management, a pioneering institute in India,
+                      providing safety-oriented education and training in Fire
+                      Engineering, Safety Management, and related fields.
+                    </li>
+                    <li>
+                      Outsourced to work with various clients, delivering
+                      specialized training sessions on Web Designing and Graphic
+                      Designing to corporate professionals, enhancing their
+                      skills and knowledge in these areas.
+                    </li>
+                    <li>
+                      Contributed to the institute’s mission of offering youth
+                      in the country strong career opportunities in Industrial
+                      Safety by integrating web and graphic design expertise
+                      into safety management training programs.
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -288,27 +327,18 @@ export default function IntroSection({ elementsRef }) {
             </h2>
             <p className="summary-desc">
               I’m also a big big fan of Deadpool, but I’ve not listed sweet talk
-              as a skill here.
-            </p>
-            <p className="summary-desc">
-              I just don’t design beautiful websites (I do that with my eyes
-              closed); I also make sure they become pally pally with those
-              sneaky Google bots.
+              as a skill here. I just don’t design beautiful websites{" "}
+              <i>(I do that with my eyes closed)</i> I also make sure they
+              become pally pally with those sneaky Google bots.
             </p>
             <p className="summary-desc">
               In plain English, I’m also good with SEO, I’ll ensure your website
               ranks high in SERPs. You know the saying - If it’s not on page 1,
-              it’s on page ‘Never’.
+              it’s on page ‘Never’. With knowledge of both frontend and backend
+              tools, I can also design custom applications from scratch, really
+              fast.
             </p>
-            <p className="summary-desc">
-              In plain English, I’m also good with SEO, I’ll ensure your website
-              ranks high in SERPs. You know the saying - If it’s not on page 1,
-              it’s on page ‘Never’.
-            </p>
-            <p className="summary-desc">
-              With knowledge of both frontend and backend tools, I can also
-              design custom applications from scratch, really fast.
-            </p>
+            <p className="summary-desc"></p>
             <p>I’m the chosen one. You’ve got the whole package, my friend!</p>
           </div>
           <div data-option="fade-in" className="flow-chart fade-out animate">
@@ -418,32 +448,34 @@ export default function IntroSection({ elementsRef }) {
                 <th>2</th>
                 <td>Development</td>
                 <td>
-                  HTML 5, CSS 3, Bootstrap 5, JavaScript, React JS, and Next JS.
+                  HTML 5, CSS 3, Bootstrap 5, JavaScript, React JS, and Next JS,
+                  Redux Toolkit.
                 </td>
               </tr>
               <tr>
                 <th>3</th>
                 <td>Animation</td>
-                <td>Adobe Premiere Pro, After Effects</td>
+                <td>Adobe Premiere Pro, After Effects.</td>
               </tr>
               <tr>
                 <th>4</th>
-                <td>Frontend CMS Tools</td>
+                <td>CMS Tools</td>
                 <td>
                   WordPress, Drupal, Opencart, Martjack, Magento, Evolution
-                  Script, and Datalife Engine
+                  Script, and Datalife Engine.
                 </td>
               </tr>
               <tr>
                 <th>5</th>
                 <td>Marketing Platforms</td>
-                <td>HubSpot and Zoho</td>
+                <td>HubSpot, Zoho, MailChimp, and Stripo.</td>
               </tr>
               <tr>
                 <th>6</th>
                 <td>SEO and Analytics</td>
                 <td>
-                  Google Analytics 4, Google Web Console, Ahref, SEMrush, Moz
+                  Google Analytics 4, Google Web Console, Ahref, SEMrush, MOZ,
+                  Page Speed Insights, and Inspectlet.
                 </td>
               </tr>
             </tbody>

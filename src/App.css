@@ -1245,6 +1245,7 @@ li {
   display: flex;
   border-top: 1px solid #00000014;
   background-image: url(/thank-you-banner.png);
+  background-color: #f3f3ee;
   background-repeat: no-repeat;
   background-size: cover;
 }

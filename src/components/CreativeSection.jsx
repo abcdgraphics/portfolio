@@ -7,7 +7,7 @@ export default function CreativeSection({ elementsRef }) {
     <div
       id="ecm"
       data-name=""
-      ref={(el) => (elementsRef.current[10] = el)}
+      ref={(el) => (elementsRef.current[16] = el)}
       className="creative-section">
       {/* <Lamp /> */}
       <h2 className="creative-section-main-heading">

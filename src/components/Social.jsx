@@ -4,7 +4,7 @@ export default function Social({ elementsRef }) {
   return (
     <div
       data-name="SOCIAL"
-      ref={(el) => (elementsRef.current[10] = el)}
+      ref={(el) => (elementsRef.current[15] = el)}
       className="lets-connect-container">
       <div>
         <div className="lets-connect-col-1">

@@ -4,22 +4,26 @@ import Card from "../components/ui/Card";
 
 const cardsData = [
   {
-    title: "Apps / Mobile Apps",
+    title: "WEB / MOBILE APPS",
     icon: "/index-icons/ui-ux.svg",
-    link: "#websites",
+    link: "#apps",
   },
   { title: "WEBSITES", icon: "/index-icons/web.svg", link: "#websites" },
   { title: "BRANDING", icon: "/index-icons/brand.svg", link: "#branding" },
   {
     title: "PRESENTATIONS",
     icon: "/index-icons/presentation.svg",
-    link: "#packaging",
+    link: "#presentations",
   },
 
   { title: "SOCIAL", icon: "/index-icons/social.svg", link: "#social" },
-  { title: "CAROUSELS", icon: "/index-icons/carousel.svg", link: "#social" },
-  { title: "PRINT", icon: "/index-icons/print.svg", link: "#print" },
-  { title: "DOCUMENTS", icon: "/index-icons/document.svg", link: "#packaging" },
+  { title: "CAROUSELS", icon: "/index-icons/carousel.svg", link: "#carousels" },
+  {
+    title: "COLLATERALS",
+    icon: "/index-icons/print.svg",
+    link: "#collaterals",
+  },
+  { title: "DOCUMENTS", icon: "/index-icons/document.svg", link: "#documents" },
   {
     title: "PACKAGING",
     icon: "/index-icons/packaging.svg",
@@ -28,7 +32,7 @@ const cardsData = [
   {
     title: "INFOGRAPHICS",
     icon: "/index-icons/infographics.svg",
-    link: "#branding",
+    link: "#infographics",
   },
 ];
 

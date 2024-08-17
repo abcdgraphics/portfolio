@@ -16,7 +16,7 @@ export default function Contact({ elementsRef }) {
   return (
     <div
       data-name="PINKIE PROMISE"
-      ref={(el) => (elementsRef.current[9] = el)}
+      ref={(el) => (elementsRef.current[14] = el)}
       className="lets-connect-container">
       <div>
         <div className="lets-connect-col-1">

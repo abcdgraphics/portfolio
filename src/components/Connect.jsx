@@ -18,39 +18,116 @@ export default function Connect({ elementsRef }) {
   const CARDS = [
     {
       id: 0,
-      name: "Manu Arora",
-      designation: "Senior Software Engineer",
+      name: "Danielblazer",
+      designation: "",
       content: (
         <p>
-          These cards are amazing, <Highlight>I want to use them</Highlight> in
-          my project. Framer motion is a godsend ngl tbh fam 🙏
+          Choosing them for web development was a great decision. The skilled
+          team created a stunning website, exceeding expectations.
         </p>
       ),
     },
     {
       id: 1,
-      name: "Elon Musk",
-      designation: "Senior Shitposter",
+      name: "Junglesound",
+      designation: "",
       content: (
         <p>
-          I dont like this Twitter thing,{" "}
-          <Highlight>deleting it right away</Highlight> because yolo. Instead, I
-          would like to call it <Highlight>X.com</Highlight> so that it can
-          easily be confused with adult sites.
+          Exceptional value for the price. The team efficiently crafts complex
+          websites in a short time by delivering outstanding results and sales.
         </p>
       ),
     },
     {
       id: 2,
-      name: "Tyler Durden",
-      designation: "Manager Project Mayhem",
+      name: "Shanmalick",
+      designation: "",
       content: (
         <p>
-          The first rule of
-          <Highlight>Fight Club</Highlight> is that you do not talk about fight
-          club. The second rule of
-          <Highlight>Fight club</Highlight> is that you DO NOT TALK about fight
-          club.
+          Highly knowledgeable team swiftly delivered a customized website
+          design matching my vision at an affordable price. Best wishes to the
+          team.
+        </p>
+      ),
+    },
+    {
+      id: 3,
+      name: "Matthew",
+      designation: "",
+      content: (
+        <p>
+          Thanks for the great, flexible work. Extremely satisfied with the
+          result. Will definitely hire them again for their adaptability.
+        </p>
+      ),
+    },
+    {
+      id: 4,
+      name: "Azngtrading",
+      designation: "",
+      content: (
+        <p>
+          Team transformed our outdated website into a modern masterpiece,
+          showcasing their web design expertise, attention to detail, and
+          competitive edge.
+        </p>
+      ),
+    },
+    {
+      id: 5,
+      name: "Mukesh kumar",
+      designation: "",
+      content: (
+        <p>
+          Working with them on UX design was a game-changer for our app. They
+          optimised every interaction, making it a joy to use with a fresh look.
+        </p>
+      ),
+    },
+    {
+      id: 6,
+      name: "Hina Amir",
+      designation: "",
+      content: (
+        <p>
+          The design team's creativity shines in brochures and posters, adding
+          professionalism and elevating marketing strategies and content
+          efficiency.
+        </p>
+      ),
+    },
+    {
+      id: 7,
+      name: "Christiansor",
+      designation: "",
+      content: (
+        <p>
+          Social media engagement skyrocketed with their graphics, especially
+          Akhil's stunning visuals that resonate with our consumers.
+        </p>
+      ),
+    },
+    {
+      id: 8,
+      name: "Fitzdylandf",
+      designation: "",
+      content: (
+        <p>
+          They're our trusted designers, consistently addressing and modifying
+          according to our needs. Our go-to partners for all design
+          requirements.
+        </p>
+      ),
+    },
+    {
+      id: 9,
+      name: "Technosnippets",
+      designation: "",
+      content: (
+        <p>
+          Their SEO boosted search rankings, enhancing online visibility and
+          user-friendliness, resulting in increased sales. A game-changer for
+          us.
         </p>
       ),
     },
@@ -59,7 +136,7 @@ export default function Connect({ elementsRef }) {
   return (
     <div
       data-name="TIME TO CONNECT"
-      ref={(el) => (elementsRef.current[8] = el)}
+      ref={(el) => (elementsRef.current[13] = el)}
       className="lets-connect-container">
       <div>
         <div className="lets-connect-col-1">
@@ -83,7 +160,7 @@ export default function Connect({ elementsRef }) {
             Now, you be the judge and tell me if I have made sense all this
             while, no pressure!
           </p>
-          <p className="last">So, why me?</p>
+          <p className="last">So, Why Me?</p>
         </div>
         <div className="connect-col-2">
           <div className="connect-col-2-1">

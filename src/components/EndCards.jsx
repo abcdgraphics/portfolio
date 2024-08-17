@@ -3,6 +3,15 @@ export default function EndCards() {
     <div className="end-cards-section">
       <div>
         <div className="end-card  border-r border-solid border-[#ffd0d0]">
+          <div>
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+            <lord-icon
+              src="https://cdn.lordicon.com/utpmnzxz.json"
+              trigger="loop"
+              delay="1500"
+              colors="primary:#ffffff"
+              style={{ width: "80px", height: "80px" }}></lord-icon>
+          </div>
           <h2 className="end-cards-heading">
             <span>Total</span> <span>Convenience</span>
           </h2>
@@ -21,7 +30,7 @@ export default function EndCards() {
         </div>
         <div className="end-card border-r border-solid border-[#ffd0d0]">
           <h2 className="end-cards-heading">
-            <span>Certified</span> <span>&nbsp;</span>
+            <span>Super</span> <span>Certified</span>
           </h2>
           <p className="end-cards-content">
             I’m not just certified, I’m super certified. I’ve kept all my

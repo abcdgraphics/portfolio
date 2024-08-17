@@ -58,9 +58,9 @@ export default function ScrollSection() {
       <ContainerScroll
         titleComponent={
           <>
-            <h1 className="text-4xl leading-8 font-semibold text-[#ed7d31] dark:text-white">
+            <h1 className="text-4xl leading-8 font-semibold text-[#ed7d31] dark:text-white container-scroll">
               EFFORTLESS <br />
-              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none container-scroll-heading">
                 CREATIVE MANAGEMENT
               </span>
             </h1>
