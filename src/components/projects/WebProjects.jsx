@@ -2,7 +2,7 @@ export default function WebProjects({ elementsRef }) {
   return (
     <div
       id="websites"
-      data-name="WEB"
+      data-name="WEBSITES"
       ref={(el) => (elementsRef.current[3] = el)}
       className="projects-showcase">
       <div>

@@ -223,6 +223,7 @@ textarea {
   /* 2 */
   padding: 0;
   /* 3 */
+  resize: none !important;
 }
 
 /*
@@ -3216,6 +3217,23 @@ button {
   display: none;
 }
 
+.creative-section-sub-heading{
+  color: #404040;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.creative-section-main-heading{
+  color: #ed7d31;
+  font-size: 75px;
+  line-height: 75px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  text-align: center;
+  width: 700px;
+  margin-bottom: 30px;
+}
 
 /* Responsive Code */
 @media screen and (max-width: 1850px) {
@@ -3333,6 +3351,17 @@ button {
   .box-slides{
     display: none;
   }
+
+  .lets-connect-col-1{
+    margin-bottom: 30px;
+  }
+
+  .creative-section-main-heading{
+    font-size: 50px;
+    line-height: 50px;
+    width: 500px;
+  }
+  
 }
 
 @media screen and (max-width: 1250px) {
@@ -3617,6 +3646,12 @@ button {
 
   .thankyou-section p{
     text-align: center;
+  }
+
+  .creative-section-main-heading{
+    font-size: 38px;
+    line-height: 38px;
+    width: 400px;
   }
 
 }
@@ -4025,5 +4060,11 @@ button {
 
   .container-scroll-row{
     margin-top: 80px;
+  }
+
+  .creative-section-main-heading{
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 90%;
   }
 }

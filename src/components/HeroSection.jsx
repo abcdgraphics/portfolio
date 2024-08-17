@@ -57,18 +57,27 @@ export default function HeroSection({ elementsRef }) {
           <p
             data-option="fade-in"
             className="fade-out flip-word-content animate">
-            Howdy, my friend (<i>yes, I&apos;ll call you that henceforth).</i>{" "}
-            Thanks for stopping by my website, well, this is actually much more
-            than just a website.
+            Howdy, my friend <i>(yes, I'll call you that henceforth)</i>. Thanks
+            for stopping by my website, well, this is actually much more than
+            just a website. Consider this to be a portal{" "}
+            <i>(you guessed it, I've watched too many sci-fi movies)</i> to dive
+            into my world. A world of design possibilities, a place of magic,
+            and in this realm, I'm the magician with the magic wand{" "}
+            <i>(or a ring, your imaginative choice)!</i>
           </p>
           <p
             data-option="fade-in"
             className="fade-out flip-word-content animate">
-            Consider this to be a portal (
-            <i> you guessed it, I&apos;ve watched too many sci-fi movies</i>) to
-            dive into my world. A world of design possibilities, a place of
-            magic, and in this realm, I&apos;m the magician with the magic wand{" "}
-            <i>(or a ring, your imaginative choice)!</i>
+            As you scroll through, I'll take you along with me on a journey of
+            design excellence, showcase a few projects that I'm proud of, and in
+            the process, we'll get to know each other a little better.
+          </p>
+          <p
+            data-option="fade-in"
+            className="fade-out flip-word-content animate">
+            Step-by-step let’s explore the possibilities, and if all the stars
+            align, our conversation will have actual words that we'll exchange
+            over a phone call.
           </p>
           <a href="#my-expertise">
             <button>Brace Yourself</button>

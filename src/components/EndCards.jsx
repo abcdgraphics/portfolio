@@ -7,8 +7,8 @@ export default function EndCards() {
             <span>Total</span> <span>Convenience</span>
           </h2>
           <p className="end-cards-content">
-            Everything is one tap away. We arrange your servicing, repairs and
-            more.
+            I just need words. I can put a project to life. Explain. Expect.
+            Extradite <i>(couldn’t find another rhyming word).</i>
           </p>
         </div>
         <div className="end-card border-r border-solid border-[#ffd0d0]">
@@ -16,24 +16,26 @@ export default function EndCards() {
             <span>No Hidden</span> <span>Costs</span>
           </h2>
           <p className="end-cards-content">
-            No fees, no markups, not even for labor. You only pay for parts.
+            None whatsoever. Even I don’t believe in awkward conversations.
           </p>
         </div>
         <div className="end-card border-r border-solid border-[#ffd0d0]">
           <h2 className="end-cards-heading">
-            <span>Complete</span> <span>Peace of Mind</span>{" "}
+            <span>Certified</span> <span>&nbsp;</span>
           </h2>
           <p className="end-cards-content">
-            No more worry if your car needs attention, we take care of it for
-            you.
+            I’m not just certified, I’m super certified. I’ve kept all my
+            certificates in a secret vault, the same one that houses KFC and
+            Coca-Cola recipes.
           </p>
         </div>
         <div className="end-card ">
           <h2 className="end-cards-heading">
-            <span>Manufacturer</span> <span>Certified</span>
+            <span>Peace </span> <span>of mind</span>
           </h2>
           <p className="end-cards-content">
-            Certified by all major car manufacturers, including parts and labor.
+            Lastly, my experience talks for myself. Just sit back, relax, and
+            drink that coffee, it’s getting cold!
           </p>
         </div>
       </div>

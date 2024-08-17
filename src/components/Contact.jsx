@@ -22,18 +22,15 @@ export default function Contact({ elementsRef }) {
         <div className="lets-connect-col-1">
           <h2>LET’S GET ACQUAINTED</h2>
           <p>
-            I have the strategic ability to understand an idea and convert it
-            into meaningful designs in various form factors that meet with the
-            objective of clients.Woah! That was some journey. If you’ve reached
-            here, then there’s no turning back. Let’s get some words exchanged
-            over a call maybe.
+            Woah! That was some journey. If you’ve reached here, then there’s no
+            turning back. Let’s get some words exchanged over a call maybe.
           </p>
           <p>
-            You might have an idea, a question, a suggestion, or just want to
-            say a plain ‘Hi’, fill up the form below and I’ll be faster than
-            Flash in reaching out to you.
+            You might have a project idea, a question, a suggestion, or just
+            want to say a plain ‘Hi’, fill up the form below and I’ll be faster
+            than Flash in reaching back to you.
           </p>
-          <p className="last">I Promise. Pinkie Promise!</p>
+          <p className="last">I promise. Pinkie promise!</p>
         </div>
         <div className="lets-connect-col-2"></div>
         <div className="lets-connect-col-3">

@@ -1,21 +1,9 @@
 import { saveAs } from "file-saver";
 
 export default function Social({ elementsRef }) {
-  const downloadPdf = () => {
-    const fileUrl = "/resume.txt";
-    const fileName = "resume.txt";
-
-    fetch(fileUrl)
-      .then((response) => response.blob())
-      .then((blob) => {
-        saveAs(blob, fileName);
-      })
-      .catch((error) => console.error("Error downloading the File:", error));
-  };
-
   return (
     <div
-      data-name="PINKIE PROMISE"
+      data-name="SOCIAL"
       ref={(el) => (elementsRef.current[10] = el)}
       className="lets-connect-container">
       <div>
@@ -27,7 +15,7 @@ export default function Social({ elementsRef }) {
           </p>
           <p>
             I don't know if you have the habit of sliding into DMs, but you can
-            slide into mine (a lil cheeky on purpose).
+            slide into mine <i>(a lil cheeky on purpose)</i>.
           </p>
         </div>
         <div className="lets-connect-col-2"></div>

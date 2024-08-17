@@ -80,17 +80,23 @@ export default function IntroSection({ elementsRef }) {
           <div data-option="fade-in" className="summary fade-out animate">
             <h2 className="summary-heading">WHO AM I?</h2>
             <p className="summary-desc">
-              The world knows me as <span>Akhil Bandaru</span>. I’m a man of
-              many talents (bragging rights reserved) with over a decade of
-              experience in crafting captivating digital and print media.
+              The world knows me as Akhil Bandaru. I’m a man of many talents
+              (bragging rights reserved) with over a decade of experience in
+              crafting captivating digital and print media.
             </p>
             <p className="summary-desc">
               I excel in leading design teams and orchestrating projects from
               visionary inception to completion. Skilled in a plethora of design
               tools and technologies, I have an uncanny knack for embracing and
-              setting new trends. I’m like Tony Stark in Iron Man, except my
+              setting new trends. I’m like Tony Stark from Iron Man, except my
               iron suit is still in the final stages of production.
             </p>
+            <p className="summary-desc">
+              I have in the past demonstrated….well, you get the drift. Less
+              words, more visual. Here’s what has kept me busy all through these
+              years, and the journey has been exciting all this while.
+            </p>
+            <p>Come along, friend!</p>
           </div>
           <div data-option="fade-in" className="flow-chart fade-out animate">
             <div>
@@ -294,7 +300,16 @@ export default function IntroSection({ elementsRef }) {
               ranks high in SERPs. You know the saying - If it’s not on page 1,
               it’s on page ‘Never’.
             </p>
-            <p>You’ve got the whole package, my friend!</p>
+            <p className="summary-desc">
+              In plain English, I’m also good with SEO, I’ll ensure your website
+              ranks high in SERPs. You know the saying - If it’s not on page 1,
+              it’s on page ‘Never’.
+            </p>
+            <p className="summary-desc">
+              With knowledge of both frontend and backend tools, I can also
+              design custom applications from scratch, really fast.
+            </p>
+            <p>I’m the chosen one. You’ve got the whole package, my friend!</p>
           </div>
           <div data-option="fade-in" className="flow-chart fade-out animate">
             <div>

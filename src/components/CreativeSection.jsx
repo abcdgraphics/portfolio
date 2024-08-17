@@ -10,10 +10,15 @@ export default function CreativeSection({ elementsRef }) {
       ref={(el) => (elementsRef.current[10] = el)}
       className="creative-section">
       {/* <Lamp /> */}
-      <h2 className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-[30px] font-medium tracking-tight text-transparent md:text-[30px] creative-section-top-heading">
-        It has survived not only five centuries, but also the leap into
-        electronic typesetting, remaining essentially unchanged.
+      <h2 className="creative-section-main-heading">
+        When in doubt, peddle it out
       </h2>
+      <p className="pb-4 text-center text-[30px] font-medium tracking-tight  md:text-[30px] creative-section-top-heading creative-section-sub-heading">
+        We have reached this far, but did you know that I’m a cyclist? Well, now
+        you do. You could hire me to cycle a marathon….maybe not but there are
+        so many other reasons why I think I’m really cool. Here’s a very short
+        short list!
+      </p>
       <ScrollSection />
       <EndCards />
     </div>

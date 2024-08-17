@@ -64,24 +64,26 @@ export default function Connect({ elementsRef }) {
       <div>
         <div className="lets-connect-col-1">
           <h2>DESIGN EXCELLENCE</h2>
-          <p>My core belief is always to under-commit and over-deliver.</p>
           <p>
-            I have the strategic ability to understand an idea and convert it
-            into meaningful designs in various form factors that meet with the
-            objective of clients.
+            My core belief is always to under-commit and over-deliver. I have
+            the strategic ability to understand an idea and convert it into
+            meaningful designs in various form factors that meet the objectives
+            of clients.
           </p>
           <p>
             Now that you’ve reached this section of my website, I think we have
             a strong potential to be great friends, and I always treat my
-            friends to something special. Here’s a quick sneak peek into some of
-            my creative lines of thought that I’ve executed for various global
-            brands in the past.
+            friends to something special.
+          </p>
+          <p>
+            Here’s a quick sneak peek into some of my creative lines of thought
+            that I’ve executed for various global brands in the past.
           </p>
           <p className="first">
             Now, you be the judge and tell me if I have made sense all this
             while, no pressure!
           </p>
-          <p className="last">C’mon it's time to connect</p>
+          <p className="last">So, why me?</p>
         </div>
         <div className="connect-col-2">
           <div className="connect-col-2-1">

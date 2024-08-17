@@ -3,14 +3,19 @@ import { CanvasRevealEffect } from "../components/ui/CanvasRevealEffect";
 import Card from "../components/ui/Card";
 
 const cardsData = [
-  { title: "UI/UX", icon: "/index-icons/ui-ux.svg", link: "#websites" },
+  {
+    title: "Apps / Mobile Apps",
+    icon: "/index-icons/ui-ux.svg",
+    link: "#websites",
+  },
   { title: "WEBSITES", icon: "/index-icons/web.svg", link: "#websites" },
   { title: "BRANDING", icon: "/index-icons/brand.svg", link: "#branding" },
   {
-    title: "INFOGRAPHICS",
-    icon: "/index-icons/infographics.svg",
-    link: "#branding",
+    title: "PRESENTATIONS",
+    icon: "/index-icons/presentation.svg",
+    link: "#packaging",
   },
+
   { title: "SOCIAL", icon: "/index-icons/social.svg", link: "#social" },
   { title: "CAROUSELS", icon: "/index-icons/carousel.svg", link: "#social" },
   { title: "PRINT", icon: "/index-icons/print.svg", link: "#print" },
@@ -21,9 +26,9 @@ const cardsData = [
     link: "#packaging",
   },
   {
-    title: "PRESENTATIONS",
-    icon: "/index-icons/presentation.svg",
-    link: "#packaging",
+    title: "INFOGRAPHICS",
+    icon: "/index-icons/infographics.svg",
+    link: "#branding",
   },
 ];
 
