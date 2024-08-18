@@ -8,14 +8,14 @@ export default function ThankyouSection() {
       </h2>
       <img src="/smile.svg" />
       <div className="thankyou-details">
-        <p>
+        {/* <p>
           <a href="tel:+919701253249">+91 970 125 3249</a>
+        </p> */}
+        <p>
+          <a href="mailto:hello@abcd.graphics">hello@abcd.graphics</a>
         </p>
         <p>
-          <a href="mailto:akhilbandaru@gmail.com">akhilbandaru@gmail.com</a>
-        </p>
-        <p>
-          <Link href="/">www.abcd.graphics</Link>
+          <Link href="/">abcd.graphics</Link>
         </p>
       </div>
     </div>
