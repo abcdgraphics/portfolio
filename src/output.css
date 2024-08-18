@@ -3681,6 +3681,10 @@ thead th:first-child{
   .tab-scroll{
     margin-top: -100px;
   }
+
+  .creative-section-main-heading{
+    margin-bottom: 15px;
+  }
 }
 
 @media screen and (max-width: 750px) {
