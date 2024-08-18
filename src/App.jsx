@@ -44,17 +44,17 @@ function App() {
       <main>
         <Sidebar name={name} />
         <div className="scrollable-main">
-          {/* <HeroSection elementsRef={elementsRef} /> */}
+          <HeroSection elementsRef={elementsRef} />
           <IndexSection elementsRef={elementsRef} />
-          {/* <IntroSection elementsRef={elementsRef} /> */}
-          {/* <ProjectsSection elementsRef={elementsRef} /> */}
-          {/* <Connect elementsRef={elementsRef} /> */}
-          {/* <Contact elementsRef={elementsRef} /> */}
-          {/* <Social elementsRef={elementsRef} /> */}
+          <IntroSection elementsRef={elementsRef} />
+          <ProjectsSection elementsRef={elementsRef} />
+          <Connect elementsRef={elementsRef} />
+          <Contact elementsRef={elementsRef} />
+          <Social elementsRef={elementsRef} />
         </div>
       </main>
-      {/* <CreativeSection elementsRef={elementsRef} /> */}
-      {/* <ThankyouSection /> */}
+      <CreativeSection elementsRef={elementsRef} />
+      <ThankyouSection />
       <CookieConsent />
       <Cursor />
       <Animate />
