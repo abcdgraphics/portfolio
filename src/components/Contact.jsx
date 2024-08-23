@@ -1,4 +1,5 @@
 import { saveAs } from "file-saver";
+import Form from "./Form";
 
 export default function Contact({ elementsRef }) {
   const downloadPdf = () => {
@@ -34,12 +35,7 @@ export default function Contact({ elementsRef }) {
         </div>
         <div className="lets-connect-col-2"></div>
         <div className="lets-connect-col-3">
-          <form>
-            <input type="text" placeholder="Full Name" />
-            <input type="text" placeholder="Email Address or Phone Number" />
-            <textarea rows={10} placeholder="Message Here" />
-            <button>Let The Magic Unfold!</button>
-          </form>
+          <Form />
         </div>
       </div>
     </div>

@@ -1755,7 +1755,7 @@ main {
 
 .fixed-side-bar > div {
   width: 150px;
-  height: 100%;
+  min-height: 900px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -3296,6 +3296,16 @@ thead th:first-child{
   font-family: "Proxima-Nova";
   font-weight: 900;
 }
+
+.error-message{
+  font-size: 15px;
+  margin-left: 25px;
+  color: #ff8e8e;
+  /* margin-top: -px; */
+  margin-bottom: 10px;
+}
+
+
 /* Responsive Code */
 @media screen and (max-width: 1850px) {
   .hero-profile-row > div:nth-child(1){

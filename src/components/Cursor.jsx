@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 export default function Cursor() {
   const dotRef = useRef(null);
   const ballRef = useRef(null);
+
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
   const [pos, setPos] = useState({ x: 0, y: 0 });
   const [dotSensitivity, setDotSensitivity] = useState(0.3);
