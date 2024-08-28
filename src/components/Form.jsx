@@ -1,4 +1,5 @@
 import { useState } from "react";
+const imageUrl = import.meta.env.VITE_IMAGE_URL;
 
 export default function Form() {
   const [formData, setFormData] = useState({
@@ -32,7 +33,7 @@ export default function Form() {
       setErrors(formErrors);
     } else {
       try {
-        const response = await fetch("http://localhost:3000/api/send-mail", {
+        const response = await fetch(`${imageUrl}api/send-mail`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

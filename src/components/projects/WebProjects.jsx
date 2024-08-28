@@ -1,84 +1,53 @@
+import { useEffect, useState } from "react";
+const imageUrl = import.meta.env.VITE_IMAGE_URL;
+
 export default function WebProjects({ elementsRef }) {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    async function fetchAllProjects() {
+      const response = await fetch(`${imageUrl}api/apps?db=apps`);
+      const appsData = await response.json();
+      if (appsData.status == "success") {
+        setData(appsData.results);
+      }
+    }
+
+    fetchAllProjects();
+  }, []);
   return (
     <div
       id="apps"
       data-name="WEB / MOBILE APPS"
       ref={(el) => (elementsRef.current[3] = el)}
       className="projects-showcase">
-      <div>
-        <div className="project-image-container">
-          <img className="project-image" src="/projects/memuvo.jpg" />
-          <div className="project-navigation">
-            <a href="/">
-              <div>
-                <img src="/nav-arrow.svg" />
+      {data &&
+        data.length > 0 &&
+        data.map((item, index) => {
+          return (
+            <div key={index}>
+              <div className="project-image-container">
+                <img
+                  className="project-image"
+                  src={`${imageUrl}${item.image}`}
+                />
+                <div className="project-navigation">
+                  <a href="/">
+                    <div>
+                      <img src="/nav-arrow.svg" />
+                    </div>
+                  </a>
+                </div>
               </div>
-            </a>
-          </div>
-        </div>
-        <div className="project-details">
-          <a href="/"> VISIT</a>
-          <p className="project-title">Memuvo Grocery Website</p>
-          <p className="project-brief">Fastest Grocery Delivery in JLT Dubai</p>
-          <p className="project-category">Design & Development</p>
-        </div>
-      </div>
-      <div>
-        <div className="project-image-container">
-          <img className="project-image" src="/projects/quesflow.jpg" />
-          <div className="project-navigation">
-            <a href="/">
-              <div>
-                <img src="/nav-arrow.svg" />
+              <div className="project-details">
+                <a href="/"> VISIT</a>
+                <p className="project-title">{item.title}</p>
+                <p className="project-brief">{item.content}</p>
+                <p className="project-category">{item.category}</p>
               </div>
-            </a>
-          </div>
-        </div>
-        <div className="project-details">
-          <a href="/"> VISIT</a>
-          <p className="project-title">Quesflow</p>
-          <p className="project-brief">Coding Unlocks a World of Wonders!</p>
-          <p className="project-category">Design Only</p>
-        </div>
-      </div>
-      <div>
-        <div className="project-image-container">
-          <img className="project-image" src="/projects/jayabheri.jpg" />
-          <div className="project-navigation">
-            <a href="/">
-              <div>
-                <img src="/nav-arrow.svg" />
-              </div>
-            </a>
-          </div>
-        </div>
-        <div className="project-details">
-          <a href="/"> VISIT</a>
-          <p className="project-title">Jayabheri</p>
-          <p className="project-brief">Blueprinting Future Landmarks</p>
-          <p className="project-category">Design Only</p>
-        </div>
-      </div>
-      <div>
-        <div className="project-image-container">
-          <img className="project-image" src="/projects/qcentrio.jpg" />
-          <div className="project-navigation">
-            <a href="/">
-              <div>
-                <img src="/nav-arrow.svg" />
-              </div>
-            </a>
-          </div>
-        </div>
-        <div className="project-details">
-          <a href="/"> VISIT</a>
-          <p className="project-title">Qcentrio Inc.</p>
-          <p className="project-brief">
-            Pioneering E2E Business Transformation (PASS : 4298)
-          </p>
-          <p className="project-category">Design & Development</p>
-        </div>
-      </div>
+            </div>
+          );
+        })}
     </div>
   );
 }

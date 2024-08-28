@@ -9,7 +9,7 @@ const RedirectComponent = () => {
 
     const redirectPath = "/client-access";
 
-    const externalUrl = "http://localhost:3000/";
+    const externalUrl = "http://localhost:3001/";
 
     if (currentPath === redirectPath) {
       window.location.replace(externalUrl);

@@ -3815,6 +3815,7 @@ thead th:first-child{
     width: 100%;
     flex-direction: unset;
     padding: 20px;
+    min-height: unset;
   }
 
   .fixed-side-bar > div > a:first-child{
@@ -4202,4 +4203,98 @@ thead th:first-child{
     padding-right: 20px;
     width: 90%;
   }
+}
+
+.login-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  cursor: default;
+}
+
+.admin-projects{
+  cursor: default;
+}
+
+.login-form form button{
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer !important;
+}
+
+.admin-projects form button{
+  cursor: default !important;
+}
+
+.admin-projects img{
+  width: 300px;
+}
+
+.page-popup{
+  position: fixed;
+  z-index: 1000000;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  /* max-height: fit-content; */
+  width: 100%;
+  background-color: #fcfcf9;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 50px;
+  
+}
+
+.popup-close{
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  border: 1px solid #E5E7EB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-download{
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  border: 1px solid #E5E7EB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pages{
+  width: 900px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.pages::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.page{
+  min-height: 500px;
+  background-color: white;
+  margin-bottom: 50px;
+}
+
+.popup-nav{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.page-count{
+  background-color: #EFEFE9;
+  border-radius: 30px;
+  padding: 10px 20px;
 }
