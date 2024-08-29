@@ -4,6 +4,7 @@ const imageUrl = import.meta.env.VITE_IMAGE_URL;
 export default function Projects({ tableName }) {
   const [formData, setFormData] = useState({
     image: null,
+    pdfFile: null,
   });
   const [errors, setErrors] = useState({});
   const [success, setSuccess] = useState(false);
@@ -12,9 +13,10 @@ export default function Projects({ tableName }) {
   const handleChange = (event) => {
     setSuccess(false);
     const { name, value, type, files } = event.target;
+    console.log(name);
     setFormData({
       ...formData,
-      [name]: type === "file" ? files[0] : value,
+      [name]: files[0],
     });
   };
 
@@ -33,6 +35,7 @@ export default function Projects({ tableName }) {
 
     const formDataToSend = new FormData();
     formDataToSend.append("image", formData.image);
+    formDataToSend.append("pdfFile", formData.pdfFile);
     formDataToSend.append("table", tableName);
 
     try {
@@ -69,11 +72,14 @@ export default function Projects({ tableName }) {
     fetchAllApps();
   }, [tableName, success]);
 
+  console.log(formData);
+
   return (
     <div>
       {success && <p>Project Stored in Database</p>}
       <h1>Upload Your Project Details Here:</h1>
       <form onSubmit={handleSubmit}>
+        <label>Upload Image Here</label>
         <input
           type="file"
           name="image"
@@ -81,6 +87,13 @@ export default function Projects({ tableName }) {
           onChange={handleChange}
         />
         {errors.image && <div className="error">{errors.image}</div>}
+        <label>Upload PDF File Here</label>
+        <input
+          type="file"
+          name="pdfFile"
+          accept="application/pdf"
+          onChange={handleChange}
+        />
         <button type="submit">Submit</button>
       </form>
 
@@ -91,6 +104,9 @@ export default function Projects({ tableName }) {
             <div key={index}>
               <div>
                 <img src={`${imageUrl}${item.image}`} />
+                {item.pdf && item.pdf.length > 0 && (
+                  <a href={`${imageUrl}${item.pdf}`}>Link to PDF</a>
+                )}
               </div>
             </div>
           );

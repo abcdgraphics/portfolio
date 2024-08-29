@@ -14,6 +14,7 @@ const Apps = () => {
   const [data, setData] = useState([]);
 
   const handleChange = (event) => {
+    setSuccess(false);
     const { name, value, type, files } = event.target;
     setFormData({
       ...formData,
@@ -78,8 +79,6 @@ const Apps = () => {
 
     fetchAllApps();
   }, [success]);
-
-  console.log(data);
 
   return (
     <div>

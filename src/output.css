@@ -4227,6 +4227,10 @@ thead th:first-child{
   cursor: default !important;
 }
 
+.admin-projects a{
+  cursor: pointer !important;
+}
+
 .admin-projects img{
   width: 300px;
 }
@@ -4268,7 +4272,7 @@ thead th:first-child{
 }
 
 .pages{
-  width: 900px;
+  /* width: 900px; */
   overflow-y: scroll;
   scrollbar-width: none;
 }
@@ -4297,4 +4301,8 @@ thead th:first-child{
   background-color: #EFEFE9;
   border-radius: 30px;
   padding: 10px 20px;
+}
+
+.pdf-page{
+  margin-bottom: 30px;
 }

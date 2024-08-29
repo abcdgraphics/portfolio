@@ -10,8 +10,7 @@
     "start": "cross-env PORT=3000 vite preview --host"
   },
   "dependencies": {
-    "@react-pdf/renderer": "^3.4.4",
-    "@react-three/fiber": "^8.16.8",
+    "@react-three/fiber": "^8.17.6",
     "clsx": "^2.1.1",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",

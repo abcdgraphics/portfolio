@@ -5,6 +5,7 @@ const imageUrl = import.meta.env.VITE_IMAGE_URL;
 export default function Presentations({ elementsRef }) {
   const [data, setData] = useState([]);
   const [popup, togglePopup] = useState(false);
+  const [pdfFile, setPdfFile] = useState("");
 
   useEffect(() => {
     async function fetchAllProjects() {
@@ -44,12 +45,19 @@ export default function Presentations({ elementsRef }) {
               <img
                 key={index}
                 src={`${imageUrl}${item.image}`}
-                onClick={() => togglePopup(true)}
+                onClick={() => {
+                  if (item.pdf && item.pdf.length > 0) {
+                    setPdfFile(item.pdf);
+                    togglePopup(true);
+                  }
+                }}
               />
             );
           })}
       </div>
-      {popup && <PagepopUp togglePopup={togglePopup} pdfFile="/resume.pdf" />}
+      {popup && pdfFile.length > 0 && (
+        <PagepopUp togglePopup={togglePopup} pdfFile={pdfFile} />
+      )}
     </>
   );
 }

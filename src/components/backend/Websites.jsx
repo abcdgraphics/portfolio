@@ -14,6 +14,7 @@ const Websites = () => {
   const [data, setData] = useState([]);
 
   const handleChange = (event) => {
+    setSuccess(false);
     const { name, value, type, files } = event.target;
     setFormData({
       ...formData,
@@ -76,7 +77,7 @@ const Websites = () => {
     }
 
     fetchAllApps();
-  }, []);
+  }, [success]);
 
   return (
     <div>
