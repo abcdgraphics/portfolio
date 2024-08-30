@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 const imageUrl = import.meta.env.VITE_IMAGE_URL;
 
-const Apps = () => {
+const Apps = ({ tableName }) => {
   const [formData, setFormData] = useState({
     title: "",
     content: "",
@@ -45,7 +45,7 @@ const Apps = () => {
     formDataToSend.append("link", formData.link);
     formDataToSend.append("category", formData.category);
     formDataToSend.append("image", formData.image);
-    formDataToSend.append("table", "apps");
+    formDataToSend.append("table", tableName);
 
     try {
       const response = await fetch(`${imageUrl}api/apps`, {
@@ -69,9 +69,33 @@ const Apps = () => {
     }
   };
 
+  const handleDelete = async (event, id) => {
+    event.preventDefault();
+
+    try {
+      const response = await fetch(
+        `${imageUrl}api/projects/delete?type=${tableName}&&id=${id}`
+      );
+      const data = await response.json();
+      console.log(data);
+
+      if (!response.ok) {
+        throw new Error("Failed to delete");
+      }
+
+      if (data.status === "success") {
+        setSuccess(true);
+      } else {
+        setSuccess(false);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
+  };
+
   useEffect(() => {
     async function fetchAllApps() {
-      const response = await fetch(`${imageUrl}api/apps?db=apps`);
+      const response = await fetch(`${imageUrl}api/apps?db=${tableName}`);
       const appsData = await response.json();
       if (appsData.status == "success") {
         setData(appsData.results);
@@ -142,7 +166,13 @@ const Apps = () => {
               <div>
                 <img src={`${imageUrl}${item.image}`} />
               </div>
-              <a href={`/apps/${item.id}/apps`}>Edit</a>
+              <a href={`/apps/${item.id}/${tableName}`}>Edit</a>
+              <div
+                onClick={(e) => {
+                  handleDelete(e, item.id);
+                }}>
+                Delete
+              </div>
             </div>
           );
         })}

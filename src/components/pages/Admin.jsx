@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Apps from "../backend/Apps";
-import Websites from "../backend/Websites";
 import Projects from "../backend/Projects";
 
 export default function Admin() {
@@ -13,9 +12,9 @@ export default function Admin() {
   const renderContent = () => {
     switch (selectedOption) {
       case "apps":
-        return <Apps />;
+        return <Apps tableName="apps" />;
       case "websites":
-        return <Websites />;
+        return <Apps tableName="websites" />;
       case "branding":
         return <Projects tableName="branding" />;
       case "presentations":

@@ -60,6 +60,30 @@ export default function Projects({ tableName }) {
     }
   };
 
+  const handleDelete = async (event, id) => {
+    event.preventDefault();
+
+    try {
+      const response = await fetch(
+        `${imageUrl}api/projects/delete?type=${tableName}&&id=${id}`
+      );
+      const data = await response.json();
+      console.log(data);
+
+      if (!response.ok) {
+        throw new Error("Failed to delete");
+      }
+
+      if (data.status === "success") {
+        setSuccess(true);
+      } else {
+        setSuccess(false);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
+  };
+
   useEffect(() => {
     async function fetchAllApps() {
       const response = await fetch(`${imageUrl}api/projects?db=${tableName}`);
@@ -107,6 +131,12 @@ export default function Projects({ tableName }) {
                 )}
               </div>
               <a href={`/projects/${item.id}/${tableName}`}>Edit</a>
+              <div
+                onClick={(e) => {
+                  handleDelete(e, item.id);
+                }}>
+                Delete
+              </div>
             </div>
           );
         })}
