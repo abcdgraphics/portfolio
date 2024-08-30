@@ -3305,6 +3305,130 @@ thead th:first-child{
   margin-bottom: 10px;
 }
 
+.login-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  cursor: default;
+}
+
+.admin-projects{
+  cursor: default;
+}
+
+.login-form form button{
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer !important;
+}
+
+.admin-projects form button{
+  cursor: default !important;
+}
+
+.admin-projects a{
+  cursor: pointer !important;
+}
+
+.admin-projects img{
+  width: 300px;
+}
+
+.page-popup{
+  position: fixed;
+  z-index: 1000000;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  /* max-height: fit-content; */
+  width: 100%;
+  background-color: #fcfcf9;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 50px;
+  
+}
+
+.popup-close{
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  border: 1px solid #E5E7EB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-download{
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  border: 1px solid #E5E7EB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pages{
+  /* width: 900px; */
+  overflow-y: scroll;
+  scrollbar-width: none;
+  position: relative;
+}
+
+.pages::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.page{
+  min-height: 500px;
+  background-color: white;
+  margin-bottom: 50px;
+}
+
+.popup-nav{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.page-count{
+  background-color: #EFEFE9;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+.pdf-page{
+  margin-bottom: 30px;
+}
+
+.edit{
+  cursor: default;
+}
+
+.edit span{
+  color: #0284c7 !important;
+  cursor: pointer;
+}
+
+.edit button, a{
+  cursor: pointer !important;
+}
+
+.edit img{
+  width: 200px;
+}
+
+.mobile-pdf-nav{
+  display: none;
+}
+
 
 /* Responsive Code */
 @media screen and (max-width: 1850px) {
@@ -3667,6 +3791,42 @@ thead th:first-child{
     font-size: 100px;
     line-height: 100px;
   }
+}
+
+@media screen and (max-width: 780px) {
+  .popup-nav{
+    display: none;
+  }
+
+  .page-count-holder{
+    display: none;
+  }
+
+  .react-pdf__Page__canvas{
+    width: 95vw !important;
+    height: unset !important;
+  }
+
+  .mobile-pdf-nav{
+    display: flex;
+    margin-bottom: 30px;
+    position: fixed;
+    gap: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100000000000;
+    padding: 10px 30px;
+  }
+
+  .mobile-pdf-nav .page-count{
+    margin-right: auto; 
+  }
+
+  .page-popup{
+    padding-top: 60px;
+  }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -4205,121 +4365,3 @@ thead th:first-child{
   }
 }
 
-.login-form{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  cursor: default;
-}
-
-.admin-projects{
-  cursor: default;
-}
-
-.login-form form button{
-  margin-left: auto;
-  margin-right: auto;
-  cursor: pointer !important;
-}
-
-.admin-projects form button{
-  cursor: default !important;
-}
-
-.admin-projects a{
-  cursor: pointer !important;
-}
-
-.admin-projects img{
-  width: 300px;
-}
-
-.page-popup{
-  position: fixed;
-  z-index: 1000000;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  /* max-height: fit-content; */
-  width: 100%;
-  background-color: #fcfcf9;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding-top: 50px;
-  
-}
-
-.popup-close{
-  width: 32px;
-  height: 32px;
-  border-radius: 5px;
-  border: 1px solid #E5E7EB;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.popup-download{
-  width: 32px;
-  height: 32px;
-  border-radius: 5px;
-  border: 1px solid #E5E7EB;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.pages{
-  /* width: 900px; */
-  overflow-y: scroll;
-  scrollbar-width: none;
-}
-
-.pages::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
-}
-
-.page{
-  min-height: 500px;
-  background-color: white;
-  margin-bottom: 50px;
-}
-
-.popup-nav{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.no-scroll {
-  overflow: hidden;
-}
-
-.page-count{
-  background-color: #EFEFE9;
-  border-radius: 30px;
-  padding: 10px 20px;
-}
-
-.pdf-page{
-  margin-bottom: 30px;
-}
-
-.edit{
-  cursor: default;
-}
-
-.edit span{
-  color: #0284c7 !important;
-  cursor: pointer;
-}
-
-.edit button, a{
-  cursor: pointer !important;
-}
-
-.edit img{
-  width: 200px;
-}

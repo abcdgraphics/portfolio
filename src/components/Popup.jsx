@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
+import { saveAs } from "file-saver";
 const imageUrl = import.meta.env.VITE_IMAGE_URL;
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
@@ -35,18 +36,41 @@ export default function PagepopUp({ togglePopup, pdfFile }) {
     return () => pagesContainer.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const downloadPdf = () => {
+    const fileUrl = `http://localhost:5000/${imageUrl}${pdfFile}`;
+    const fileName = "file";
+
+    fetch(fileUrl)
+      .then((response) => response.blob())
+      .then((blob) => {
+        saveAs(blob, fileName);
+      })
+      .catch((error) => console.error("Error downloading the File:", error));
+  };
+
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
   }
 
   return (
     <div className="page-popup">
-      <div>
+      <div className="page-count-holder">
         <div className="page-count">
           {pageNumber} / {numPages}
         </div>
       </div>
       <div className="pages" ref={pagesRef}>
+        <div className="mobile-pdf-nav">
+          <div className="page-count">
+            {pageNumber} / {numPages}
+          </div>
+          <div className="popup-close" onClick={() => togglePopup(false)}>
+            <img src="/cross.svg" />
+          </div>
+          <div onClick={downloadPdf} className="popup-download">
+            <img src="/progress.svg" />
+          </div>
+        </div>
         <Document
           file={`http://localhost:5000/${imageUrl}${pdfFile}`}
           // file="/test.pdf"
@@ -64,7 +88,7 @@ export default function PagepopUp({ togglePopup, pdfFile }) {
         <div className="popup-close" onClick={() => togglePopup(false)}>
           <img src="/cross.svg" />
         </div>
-        <div className="popup-download">
+        <div onClick={downloadPdf} className="popup-download">
           <img src="/progress.svg" />
         </div>
       </div>

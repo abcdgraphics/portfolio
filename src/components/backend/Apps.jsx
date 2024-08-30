@@ -103,7 +103,7 @@ const Apps = ({ tableName }) => {
     }
 
     fetchAllApps();
-  }, [success]);
+  }, [success, tableName]);
 
   return (
     <div>

@@ -68,6 +68,7 @@ export default function Login() {
         {errors.email && <p className="error-message">{errors.email}</p>}
         <input
           name="password"
+          type="password"
           placeholder="Password"
           value={formData.password}
           onChange={handleChange}
