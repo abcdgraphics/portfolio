@@ -4306,3 +4306,20 @@ thead th:first-child{
 .pdf-page{
   margin-bottom: 30px;
 }
+
+.edit{
+  cursor: default;
+}
+
+.edit span{
+  color: #0284c7 !important;
+  cursor: pointer;
+}
+
+.edit button, a{
+  cursor: pointer !important;
+}
+
+.edit img{
+  width: 200px;
+}

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 const imageUrl = import.meta.env.VITE_IMAGE_URL;
 
-const Websites = () => {
+export default function EditApps() {
   const [formData, setFormData] = useState({
     title: "",
     content: "",
@@ -11,7 +12,7 @@ const Websites = () => {
   });
   const [errors, setErrors] = useState({});
   const [success, setSuccess] = useState(false);
-  const [data, setData] = useState([]);
+  const { id, type } = useParams();
 
   const handleChange = (event) => {
     setSuccess(false);
@@ -45,22 +46,23 @@ const Websites = () => {
     formDataToSend.append("link", formData.link);
     formDataToSend.append("category", formData.category);
     formDataToSend.append("image", formData.image);
-    formDataToSend.append("table", "websites");
+    formDataToSend.append("table", type);
+    formDataToSend.append("id", id);
 
     try {
-      const response = await fetch(`${imageUrl}api/apps`, {
+      const response = await fetch(`${imageUrl}api/edit/apps`, {
         method: "POST",
         body: formDataToSend,
       });
-
       const data = await response.json();
-
+      console.log(data);
       if (!response.ok) {
         throw new Error("Failed to submit the form");
       }
-
       if (data.status === "success") {
         setSuccess(true);
+      } else {
+        setSuccess(false);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -69,20 +71,27 @@ const Websites = () => {
 
   useEffect(() => {
     async function fetchAllApps() {
-      const response = await fetch(`${imageUrl}api/apps?db=websites`);
-      const appsData = await response.json();
-      if (appsData.status == "success") {
-        setData(appsData.results);
+      const response = await fetch(
+        `${imageUrl}api/edit/apps?db=${type}&&id=${id}`
+      );
+      if (response.ok) {
+        const appsData = await response.json();
+        if (appsData.results && appsData.results.length > 0)
+          setFormData({
+            title: appsData.results[0].title,
+            content: appsData.results[0].content,
+            link: appsData.results[0].link,
+            category: appsData.results[0].category,
+            image: appsData.results[0].image,
+          });
       }
     }
-
     fetchAllApps();
-  }, [success]);
+  }, [id, type]);
 
   return (
-    <div>
+    <div className="edit">
       {success && <p>Project Stored in Database</p>}
-      <h1>Upload Your Project Details Here:</h1>
       <form onSubmit={handleSubmit}>
         <input
           name="title"
@@ -118,34 +127,17 @@ const Websites = () => {
           <option value="d-and-d">Design and Development</option>
         </select>
         {errors.category && <div className="error">{errors.category}</div>}
+        <img src={`${imageUrl}${formData.image}`} />
         <input
           type="file"
           name="image"
           accept="image/*"
           onChange={handleChange}
         />
+
         {errors.image && <div className="error">{errors.image}</div>}
         <button type="submit">Submit</button>
       </form>
-
-      {data &&
-        data.length > 0 &&
-        data.map((item, index) => {
-          return (
-            <div key={index}>
-              <div>{item.title}</div>
-              <div>{item.content}</div>
-              <div>{item.category}</div>
-              <div>{item.link}</div>
-              <div>
-                <img src={`${imageUrl}${item.image}`} />
-              </div>
-              <a href={`/apps/${item.id}/websites`}>Edit</a>
-            </div>
-          );
-        })}
     </div>
   );
-};
-
-export default Websites;
+}

@@ -52,12 +52,13 @@ const Apps = () => {
         method: "POST",
         body: formDataToSend,
       });
+      const data = await response.json();
+      console.log(data);
 
       if (!response.ok) {
         throw new Error("Failed to submit the form");
       }
 
-      const data = await response.json();
       if (data.status === "success") {
         setSuccess(true);
       } else {
@@ -133,7 +134,7 @@ const Apps = () => {
         data.length > 0 &&
         data.map((item, index) => {
           return (
-            <div key={index}>
+            <div style={{ marginBottom: "20px" }} key={index}>
               <div>{item.title}</div>
               <div>{item.content}</div>
               <div>{item.category}</div>
@@ -141,6 +142,7 @@ const Apps = () => {
               <div>
                 <img src={`${imageUrl}${item.image}`} />
               </div>
+              <a href={`/apps/${item.id}/apps`}>Edit</a>
             </div>
           );
         })}

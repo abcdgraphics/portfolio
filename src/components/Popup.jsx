@@ -48,7 +48,7 @@ export default function PagepopUp({ togglePopup, pdfFile }) {
       </div>
       <div className="pages" ref={pagesRef}>
         <Document
-          file={`http://localhost:8080/${imageUrl}${pdfFile}`}
+          file={`http://localhost:5000/${imageUrl}${pdfFile}`}
           // file="/test.pdf"
           onLoadSuccess={onDocumentLoadSuccess}>
           {Array.from(new Array(numPages), (el, index) => (

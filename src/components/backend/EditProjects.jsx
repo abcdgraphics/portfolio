@@ -1,19 +1,20 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 const imageUrl = import.meta.env.VITE_IMAGE_URL;
 
-export default function Projects({ tableName }) {
+export default function EditProjects() {
   const [formData, setFormData] = useState({
     image: null,
     pdfFile: null,
   });
   const [errors, setErrors] = useState({});
   const [success, setSuccess] = useState(false);
-  const [data, setData] = useState([]);
+  const { id, category } = useParams();
 
   const handleChange = (event) => {
     setSuccess(false);
     const { name, value, type, files } = event.target;
-    console.log(name);
+
     setFormData({
       ...formData,
       [name]: files[0],
@@ -36,10 +37,12 @@ export default function Projects({ tableName }) {
     const formDataToSend = new FormData();
     formDataToSend.append("image", formData.image);
     formDataToSend.append("pdfFile", formData.pdfFile);
-    formDataToSend.append("table", tableName);
+    formDataToSend.append("table", category);
+    formDataToSend.append("id", id);
+    console.log(formData);
 
     try {
-      const response = await fetch(`${imageUrl}api/projects`, {
+      const response = await fetch(`${imageUrl}api/edit/projects`, {
         method: "POST",
         body: formDataToSend,
       });
@@ -62,28 +65,60 @@ export default function Projects({ tableName }) {
 
   useEffect(() => {
     async function fetchAllApps() {
-      const response = await fetch(`${imageUrl}api/projects?db=${tableName}`);
-      const appsData = await response.json();
-      if (appsData.status == "success") {
-        setData(appsData.results);
+      const response = await fetch(
+        `${imageUrl}api/edit/projects?db=${category}&&id=${id}`
+      );
+      if (response.ok) {
+        const appsData = await response.json();
+        if (appsData && appsData.results.length > 0) {
+          console.log(appsData);
+          if (appsData.status == "success") {
+            setFormData({
+              image: appsData.results[0].image,
+              pdfFile: appsData.results[0].pdf,
+            });
+          }
+        }
       }
     }
 
     fetchAllApps();
-  }, [tableName, success]);
+  }, [category, id]);
 
   return (
-    <div>
+    <div className="edit">
       {success && <p>Project Stored in Database</p>}
-      <h1>Upload Your Project Details Here:</h1>
+      <h2>Your Current Files:</h2>
+      <p>Image File:</p>
+
+      <img src={`${imageUrl}${formData.image}`} />
+
+      <p>PDF File:</p>
+      {formData.pdfFile && formData.pdfFile.length > 0 ? (
+        <a href={`${imageUrl}${formData.pdfFile}`}>
+          Click Here to view pdf file
+        </a>
+      ) : (
+        <p>No PDF File Found</p>
+      )}
+      <p
+        onClick={() => {
+          setFormData({
+            ...formData,
+            pdfFile: null,
+          });
+        }}>
+        Delete PDF
+      </p>
+
       <form onSubmit={handleSubmit}>
-        <label>Upload Image Here</label>
+        <label style={{ marginTop: "20px" }}>Upload Image Here</label>
         <input
           type="file"
           name="image"
           accept="image/*"
           onChange={handleChange}
-        />
+        />{" "}
         {errors.image && <div className="error">{errors.image}</div>}
         <label>Upload PDF File Here</label>
         <input
@@ -94,22 +129,6 @@ export default function Projects({ tableName }) {
         />
         <button type="submit">Submit</button>
       </form>
-
-      {data &&
-        data.length > 0 &&
-        data.map((item, index) => {
-          return (
-            <div key={index}>
-              <div>
-                <img src={`${imageUrl}${item.image}`} />
-                {item.pdf && item.pdf.length > 0 && (
-                  <a href={`${imageUrl}${item.pdf}`}>Link to PDF</a>
-                )}
-              </div>
-              <a href={`/projects/${item.id}/${tableName}`}>Edit</a>
-            </div>
-          );
-        })}
     </div>
   );
 }
