@@ -37,7 +37,7 @@ export default function PagepopUp({ togglePopup, pdfFile }) {
   }, []);
 
   const downloadPdf = () => {
-    const fileUrl = `http://localhost:5000/${imageUrl}${pdfFile}`;
+    const fileUrl = `https://proxy.abcd.graphics/${imageUrl}${pdfFile}`;
     const fileName = "file";
 
     fetch(fileUrl)
@@ -72,7 +72,7 @@ export default function PagepopUp({ togglePopup, pdfFile }) {
           </div>
         </div>
         <Document
-          file={`http://localhost:5000/${imageUrl}${pdfFile}`}
+          file={`https://proxy.abcd.graphics/${imageUrl}${pdfFile}`}
           // file="/test.pdf"
           onLoadSuccess={onDocumentLoadSuccess}>
           {Array.from(new Array(numPages), (el, index) => (
