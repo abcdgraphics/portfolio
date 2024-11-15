@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-const imageUrl = import.meta.env.VITE_IMAGE_URL;
+const backendURL = import.meta.env.VITE_BACKEND_URL;
 
 export default function Websites({ elementsRef }) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     async function fetchAllProjects() {
-      const response = await fetch(`${imageUrl}api/apps?db=websites`);
+      const response = await fetch(`${backendURL}/api/apps?db=websites`);
       const appsData = await response.json();
       if (appsData.status == "success") {
         setData(appsData.results);
@@ -29,7 +29,7 @@ export default function Websites({ elementsRef }) {
               <div className="project-image-container">
                 <img
                   className="project-image"
-                  src={`${imageUrl}${item.image}`}
+                  src={`${backendURL}/${item.image}`}
                 />
                 <div className="project-navigation">
                   <a href="/">

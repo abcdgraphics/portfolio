@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-const imageUrl = import.meta.env.VITE_IMAGE_URL;
+const backendURL = import.meta.env.VITE_BACKEND_URL;
 
 export default function Projects({ tableName }) {
   const [formData, setFormData] = useState({
@@ -39,7 +39,7 @@ export default function Projects({ tableName }) {
     formDataToSend.append("table", tableName);
 
     try {
-      const response = await fetch(`${imageUrl}api/projects`, {
+      const response = await fetch(`${backendURL}/api/projects`, {
         method: "POST",
         body: formDataToSend,
       });
@@ -65,7 +65,7 @@ export default function Projects({ tableName }) {
 
     try {
       const response = await fetch(
-        `${imageUrl}api/projects/delete?type=${tableName}&&id=${id}`
+        `${backendURL}/api/projects/delete?type=${tableName}&&id=${id}`
       );
       const data = await response.json();
       console.log(data);
@@ -86,7 +86,9 @@ export default function Projects({ tableName }) {
 
   useEffect(() => {
     async function fetchAllApps() {
-      const response = await fetch(`${imageUrl}api/projects?db=${tableName}`);
+      const response = await fetch(
+        `${backendURL}/api/projects?db=${tableName}`
+      );
       const appsData = await response.json();
       if (appsData.status == "success") {
         setData(appsData.results);
@@ -125,9 +127,9 @@ export default function Projects({ tableName }) {
           return (
             <div key={index}>
               <div>
-                <img src={`${imageUrl}${item.image}`} />
+                <img src={`${backendURL}/${item.image}`} />
                 {item.pdf && item.pdf.length > 0 && (
-                  <a href={`${imageUrl}${item.pdf}`}>Link to PDF</a>
+                  <a href={`${backendURL}/${item.pdf}`}>Link to PDF</a>
                 )}
               </div>
               <a href={`/projects/${item.id}/${tableName}`}>Edit</a>

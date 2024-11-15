@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import PagepopUp from "../Popup";
-const imageUrl = import.meta.env.VITE_IMAGE_URL;
+const backendURL = import.meta.env.VITE_BACKEND_URL;
 
 export default function Presentations({ elementsRef }) {
   const [data, setData] = useState([]);
@@ -9,7 +9,9 @@ export default function Presentations({ elementsRef }) {
 
   useEffect(() => {
     async function fetchAllProjects() {
-      const response = await fetch(`${imageUrl}api/projects?db=presentations`);
+      const response = await fetch(
+        `${backendURL}/api/projects?db=presentations`
+      );
       const appsData = await response.json();
       if (appsData.status == "success") {
         setData(appsData.results);
@@ -44,7 +46,7 @@ export default function Presentations({ elementsRef }) {
             return (
               <img
                 key={index}
-                src={`${imageUrl}${item.image}`}
+                src={`${backendURL}/${item.image}`}
                 onClick={() => {
                   if (item.pdf && item.pdf.length > 0) {
                     setPdfFile(item.pdf);
