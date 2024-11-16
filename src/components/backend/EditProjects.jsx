@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-const imageUrl = import.meta.env.VITE_IMAGE_URL;
+const backendURL = import.meta.env.VITE_BACKEND_URL;
 
 export default function EditProjects() {
   const [formData, setFormData] = useState({
@@ -42,7 +42,7 @@ export default function EditProjects() {
     console.log(formData);
 
     try {
-      const response = await fetch(`${imageUrl}api/edit/projects`, {
+      const response = await fetch(`${backendURL}/api/edit/projects`, {
         method: "POST",
         body: formDataToSend,
       });
@@ -66,7 +66,7 @@ export default function EditProjects() {
   useEffect(() => {
     async function fetchAllApps() {
       const response = await fetch(
-        `${imageUrl}api/edit/projects?db=${category}&&id=${id}`
+        `${backendURL}/api/edit/projects?db=${category}&&id=${id}`
       );
       if (response.ok) {
         const appsData = await response.json();
@@ -91,11 +91,11 @@ export default function EditProjects() {
       <h2>Your Current Files:</h2>
       <p>Image File:</p>
 
-      <img src={`${imageUrl}${formData.image}`} />
+      <img src={`${backendURL}/${formData.image}`} />
 
       <p>PDF File:</p>
       {formData.pdfFile && formData.pdfFile.length > 0 ? (
-        <a href={`${imageUrl}${formData.pdfFile}`}>
+        <a href={`${backendURL}/${formData.pdfFile}`}>
           Click Here to view pdf file
         </a>
       ) : (

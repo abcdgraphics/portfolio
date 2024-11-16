@@ -3,7 +3,7 @@ import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 import { saveAs } from "file-saver";
-const imageUrl = import.meta.env.VITE_IMAGE_URL;
+const backendURL = import.meta.env.VITE_BACKEND_URL;
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
@@ -37,7 +37,7 @@ export default function PagepopUp({ togglePopup, pdfFile }) {
   }, []);
 
   const downloadPdf = () => {
-    const fileUrl = `https://proxy.abcd.graphics/${imageUrl}${pdfFile}`;
+    const fileUrl = `https://proxy.abcd.graphics/${backendURL}/${pdfFile}`;
     const fileName = "file";
 
     fetch(fileUrl)
@@ -72,7 +72,7 @@ export default function PagepopUp({ togglePopup, pdfFile }) {
           </div>
         </div>
         <Document
-          file={`https://proxy.abcd.graphics/${imageUrl}${pdfFile}`}
+          file={`https://proxy.abcd.graphics/${backendURL}/${pdfFile}`}
           // file="/test.pdf"
           onLoadSuccess={onDocumentLoadSuccess}>
           {Array.from(new Array(numPages), (el, index) => (

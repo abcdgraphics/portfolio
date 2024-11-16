@@ -1,5 +1,5 @@
 import { useState } from "react";
-const imageUrl = import.meta.env.VITE_IMAGE_URL;
+const backendURL = import.meta.env.VITE_BACKEND_URL;
 
 export default function Form() {
   const [formData, setFormData] = useState({
@@ -33,14 +33,16 @@ export default function Form() {
       setErrors(formErrors);
     } else {
       try {
-        const response = await fetch(`${imageUrl}api/send-mail`, {
+        const response = await fetch(`${backendURL}/api/send-mail`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(formData),
         });
-        console.log(response);
+
+        console.log(await response.json());
+
         if (!response.ok) {
           throw new Error("Failed to submit the form");
         }

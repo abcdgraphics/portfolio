@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-const imageUrl = import.meta.env.VITE_IMAGE_URL;
+const backendURL = import.meta.env.VITE_BACKEND_URL;
 
 export default function EditApps() {
   const [formData, setFormData] = useState({
@@ -50,7 +50,7 @@ export default function EditApps() {
     formDataToSend.append("id", id);
 
     try {
-      const response = await fetch(`${imageUrl}api/edit/apps`, {
+      const response = await fetch(`${backendURL}/api/edit/apps`, {
         method: "POST",
         body: formDataToSend,
       });
@@ -72,7 +72,7 @@ export default function EditApps() {
   useEffect(() => {
     async function fetchAllApps() {
       const response = await fetch(
-        `${imageUrl}api/edit/apps?db=${type}&&id=${id}`
+        `${backendURL}/api/edit/apps?db=${type}&&id=${id}`
       );
       if (response.ok) {
         const appsData = await response.json();
@@ -127,7 +127,7 @@ export default function EditApps() {
           <option value="d-and-d">Design and Development</option>
         </select>
         {errors.category && <div className="error">{errors.category}</div>}
-        <img src={`${imageUrl}${formData.image}`} />
+        <img src={`${backendURL}/${formData.image}`} />
         <input
           type="file"
           name="image"

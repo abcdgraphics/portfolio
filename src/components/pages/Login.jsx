@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-const imageUrl = import.meta.env.VITE_IMAGE_URL;
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 export default function Login() {
   const [formData, setFormData] = useState({
@@ -31,7 +31,7 @@ export default function Login() {
       setErrors(formErrors);
     } else {
       try {
-        const response = await fetch(`${imageUrl}api/login`, {
+        const response = await fetch(`${backendUrl}/api/login`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -45,7 +45,6 @@ export default function Login() {
 
         const data = await response.json();
 
-        console.log(data);
         if (data.status === "success") {
           localStorage.setItem("portfolio_access", data.token);
           navigate("/admin");

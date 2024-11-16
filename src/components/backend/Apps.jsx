@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-const imageUrl = import.meta.env.VITE_IMAGE_URL;
+const backendURL = import.meta.env.VITE_BACKEND_URL;
 
 const Apps = ({ tableName }) => {
   const [formData, setFormData] = useState({
@@ -48,7 +48,7 @@ const Apps = ({ tableName }) => {
     formDataToSend.append("table", tableName);
 
     try {
-      const response = await fetch(`${imageUrl}api/apps`, {
+      const response = await fetch(`${backendURL}/api/apps`, {
         method: "POST",
         body: formDataToSend,
       });
@@ -74,7 +74,7 @@ const Apps = ({ tableName }) => {
 
     try {
       const response = await fetch(
-        `${imageUrl}api/projects/delete?type=${tableName}&&id=${id}`
+        `${backendURL}/api/projects/delete?type=${tableName}&&id=${id}`
       );
       const data = await response.json();
       console.log(data);
@@ -95,7 +95,7 @@ const Apps = ({ tableName }) => {
 
   useEffect(() => {
     async function fetchAllApps() {
-      const response = await fetch(`${imageUrl}api/apps?db=${tableName}`);
+      const response = await fetch(`${backendURL}/api/apps?db=${tableName}`);
       const appsData = await response.json();
       if (appsData.status == "success") {
         setData(appsData.results);
@@ -164,7 +164,7 @@ const Apps = ({ tableName }) => {
               <div>{item.category}</div>
               <div>{item.link}</div>
               <div>
-                <img src={`${imageUrl}${item.image}`} />
+                <img src={`${backendURL}/${item.image}`} />
               </div>
               <a href={`/apps/${item.id}/${tableName}`}>Edit</a>
               <div

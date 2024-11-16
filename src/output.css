@@ -1664,10 +1664,10 @@ html {
   color: white;
 }
 
-::selection {
+/* ::selection {
   background: #f9ac79;
   color: white;
-}
+} */
 
 article,
 aside,
@@ -2403,6 +2403,7 @@ tr:nth-child(odd) {
   transition: background-color 0.3s;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 30px;
   margin-bottom: 50px;
 }
@@ -2415,6 +2416,10 @@ tr:nth-child(odd) {
   font-weight: 500;
   cursor: none;
   width: 250px;
+}
+
+.projets-main-heading .resume-download{
+  margin: 0;
 }
 
 .resume-text {
@@ -2634,6 +2639,20 @@ li {
 .end-cards-heading span {
   display: block;
 }
+<<<<<<< HEAD
+=======
+
+/* .end-cards-heading span::-moz-selection {
+  background: none;
+  color: black;
+}
+
+.end-cards-heading span::selection {
+  background: none;
+  color: black;
+} */
+
+>>>>>>> 3a1d94e7dae16f1294e25a6b3f752f1cda3d5606
 .end-cards-content {
   font-size: 16px;
   line-height: 20px;
@@ -2641,6 +2660,19 @@ li {
   font-weight: 500;
 }
 
+<<<<<<< HEAD
+=======
+/* .end-cards-content::-moz-selection {
+  background: none;
+  color: black;
+}
+
+.end-cards-content::selection {
+  background: none;
+  color: black;
+} */
+
+>>>>>>> 3a1d94e7dae16f1294e25a6b3f752f1cda3d5606
 .end-card {
   padding: 0px 30px;
   flex: 1;
