@@ -1,6 +1,20 @@
-import PropTypes from "prop-types";
+import PropTypes, { func } from "prop-types";
+import React, { useState, useEffect } from 'react';
+
 
 export default function HeroSection({ elementsRef }) {
+
+  const [year, setYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    // Function to update the year
+    const updateYear = () => {
+      setYear(new Date().getFullYear());
+    };
+    updateYear();  // mount firstPage Renders
+
+  }, []);
+
   return (
     <section
       data-name=""
@@ -32,7 +46,7 @@ export default function HeroSection({ elementsRef }) {
             <div></div>
             <div className="portfolio-timeline">
               <p>BORN – 03 NOV 1989</p>
-              <p>2024</p>
+              <p>{year}</p>
             </div>
           </div>
         </div>
@@ -89,7 +103,6 @@ export default function HeroSection({ elementsRef }) {
     </section>
   );
 }
-
 HeroSection.propTypes = {
   elementsRef: PropTypes.object.isRequired,
 };

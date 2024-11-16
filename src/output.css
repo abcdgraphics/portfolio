@@ -1755,7 +1755,7 @@ main {
 
 .fixed-side-bar > div {
   width: 150px;
-  min-height: 900px;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2394,7 +2394,7 @@ tr:nth-child(odd) {
 
 .projets-main-heading {
   padding: 30px 50px;
-  background-color: #f3f3ee;
+  background-color: white;
   z-index: 100;
   position: sticky;
   top: 0;
@@ -2634,32 +2634,11 @@ li {
 .end-cards-heading span {
   display: block;
 }
-
-.end-cards-heading span::-moz-selection {
-  background: none;
-  color: black;
-}
-
-.end-cards-heading span::selection {
-  background: none;
-  color: black;
-}
-
 .end-cards-content {
   font-size: 16px;
   line-height: 20px;
   font-family: Proxima Nova;
   font-weight: 500;
-}
-
-.end-cards-content::-moz-selection {
-  background: none;
-  color: black;
-}
-
-.end-cards-content::selection {
-  background: none;
-  color: black;
 }
 
 .end-card {
@@ -2817,8 +2796,8 @@ li {
   padding: 50px 100px;
   display: flex;
   border-top: 1px solid #00000014;
-  background: #f3f3ee;
-  background-image: url(/thank-you-banner.png);
+  background: white;
+  background-image: url(/white.png);
   background-repeat: no-repeat;
   background-size: cover;
 }

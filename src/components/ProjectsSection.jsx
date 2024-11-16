@@ -9,10 +9,11 @@ import SocialProjects from "./projects/SocialProjects";
 import WebProjects from "./projects/WebProjects";
 import Websites from "./projects/Websites";
 
+
 export default function ProjectsSection({ elementsRef }) {
   return (
     <div id="works" className="projects-section">
-      <div className="projets-main-heading">
+      <div className="projets-main-heading" >
         <h2>PROJECTS THAT I’M PROUD OF</h2>
       </div>
       <WebProjects elementsRef={elementsRef} />
