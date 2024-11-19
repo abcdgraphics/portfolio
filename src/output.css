@@ -2621,7 +2621,7 @@ li {
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
-  padding: 50px;
+  padding: 100px;
   color: white;
   gap: 30px;
 }
@@ -2639,20 +2639,7 @@ li {
 .end-cards-heading span {
   display: block;
 }
-<<<<<<< HEAD
-=======
 
-/* .end-cards-heading span::-moz-selection {
-  background: none;
-  color: black;
-}
-
-.end-cards-heading span::selection {
-  background: none;
-  color: black;
-} */
-
->>>>>>> 3a1d94e7dae16f1294e25a6b3f752f1cda3d5606
 .end-cards-content {
   font-size: 16px;
   line-height: 20px;
@@ -2660,19 +2647,6 @@ li {
   font-weight: 500;
 }
 
-<<<<<<< HEAD
-=======
-/* .end-cards-content::-moz-selection {
-  background: none;
-  color: black;
-}
-
-.end-cards-content::selection {
-  background: none;
-  color: black;
-} */
-
->>>>>>> 3a1d94e7dae16f1294e25a6b3f752f1cda3d5606
 .end-card {
   padding: 0px 30px;
   flex: 1;
